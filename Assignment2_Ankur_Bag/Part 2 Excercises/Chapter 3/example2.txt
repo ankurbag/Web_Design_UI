@@ -1,0 +1,10 @@
+Figures 3 - 26  :
+ GIF is preferred for the following reasons -
+1.There are minimum colors (For instance only 2 colors in the image)
+2.It would be smaller in size compared to JPEG
+
+Figure 3 - 27 :
+JPEG is preffered over GIF for the following reasons-
+1.This is a photograph and contains millions of colors
+2.With JPEG we can preserve the quality
+3.With GIF , ther can be loss of quality

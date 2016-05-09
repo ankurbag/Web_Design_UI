@@ -1,0 +1,87 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/HTML; charset=iso-8859-1" />
+<title>Part 5 - Assignment 6</title>
+<script type="text/javaScript" src="myJs.js">	</script>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+</head>
+
+<body>
+<div class="page-header">
+<h1>Selection of Elements</h1>
+</div>
+<div class="container">
+
+  <table class="table table-hover table-striped ">
+    <tr>
+      <td colspan="3">Name of Students</td>
+      <td colspan="3">Selected Values</td>
+    </tr>
+    <tr>
+      <td  rowspan="3" align="right">
+      <label>
+        <select name="selectLeft" size="12" id="leftSelect" multiple style="width:100%;"> 
+          <option value="1" selected="selected">Agrawal, Bhavin</option>
+          <option value="2">Agrawal, Rajat</option>
+          <option value="3">Agrawal, Palak</option>
+          <option value="4">Agrawal, Nimesh</option>
+          <option value="5">Agrawal, Bhavin</option>
+          <option value="6">Sharma, Shantanu</option>
+          <option value="7">Singh, Trisha</option>
+          <option value="8">Bag, Ankur </option>
+          <option value="9">Subramaniam, Arvind</option>
+          <option value="10">Shah, Zalak</option> 
+          <option value="11">Goyal, Sammy</option> 
+          <option value="12">Panchal, Hershid</option> 
+          <option value="13">Multani, Gurpreet</option> 
+          <option value="14">Patani, Romil</option> 
+          <option value="15">Pandita, Dheeraj</option>
+          <option value="16">Durgawala, Ammar</option>
+          <option value="17">Panchal, Hershid</option>
+          <option value="18">Panchal, Hershid</option>
+          <option value="19">Panchal, Hershid</option>
+          <option value="20">Panchal, Hershid</option>
+          <option value="21">Panchal, Hershid</option>
+        </select>
+      </label>
+      </td>
+      <td width="1%" align="center">&nbsp;</td>
+      <td width="10%" align="center">&nbsp;</td>
+      <td rowspan="3" align="right">
+        <select name="selectRight" size="12" id="rightSelect" multiple style="width:100%;">
+          <option value="0" selected="selected">Buddhadev, Nilay</option>
+          </select></td>
+    </tr>
+    <tr>
+      <td align="center"></td>
+      <td align="center">
+      <label> 
+        <button name="btnRight" class="btn-info"  id="btnRight" onclick="moveToTarget('leftSelect', 'rightSelect');">&gt;&gt;</button>
+      </label>
+      </td>
+    </tr>
+    <tr>
+      <td align="center">&nbsp;</td>
+      <td align="center"><label>
+        <button name="btnLeft" class="btn-info"  id="btnLeft"  onclick="moveToTarget('rightSelect', 'leftSelect');">&lt;&lt;</button>
+      </label></td>
+    </tr>
+    <tr>
+      <td><button name="button" id="button" value="" class="btn-danger" onclick="invertSelection(leftSelect);">Invert Selection </button>
+      <button name="button2" id="button2" value="" class="btn-danger" value="" onclick="listboxSelectallItems('leftSelect',true)">Select ALL </button></td>
+      
+      <td align="left"></td>
+      <td align="left"></td>
+      <td align="left">
+      <button name="button3" id="button3" value="" class="btn-danger" onclick="invertSelection(rightSelect);">Invert Selection </button>
+      <button name="button4" id="button4" value="" class="btn-danger" value="" onclick="listboxSelectallItems('rightSelect',true)">Select ALL </button>
+      
+      
+ 	</td>
+    </tr>
+  </table>
+
+</div>
+</body>
+</html>

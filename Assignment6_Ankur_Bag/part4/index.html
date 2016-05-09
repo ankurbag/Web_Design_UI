@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+     <style>
+	 
+		.container{
+			/*width:900px;
+			height:400px;
+			padding:20px;*/
+			padding-top:2.5%;
+			width:800px;
+			border:1px solid gray;
+			-webkit-box-sizing:border-box;
+			-moz-box-sizing:border-box;
+			box-sizing:border-box;
+		  background: black;
+		}
+		.image-slider-wrapper{
+			overflow: hidden;
+		}
+		#image_slider{
+			position: relative;
+			overflow: hidden;
+			height: 280px;
+			padding:0;
+			left:0;
+		}
+		#image_slider li{
+			position:relative;
+			max-width: 100%;
+			float:left;
+			list-style: none;
+			left: 0;
+		}
+		.img-overlay {
+   margin: -120px 0 -20px 10px; /* play with these to position the image */
+position:absolute;
+z-index:100;
+width:300px;
+}
+	a:hover{
+		cursor: pointer; cursor: hand; 
+		opacity:1.0;
+	}
+	
+	 </style>
+     <script src="myJs.js"></script>
+	</head>
+	<body>
+		 <div class="page-header" style="padding-left:50%">
+        		<h3>Amazon Inc</h3>
+    	    </div>
+       
+		<div class="container">
+        	
+    
+            <div class="row">
+			<div class="image-slider-wrapper col-md-12 col-lg-12" >
+				<ul id="image_slider">
+					<li><img src="images/1.jpg"></li>
+					<li><img src="images/4.jpg"></li>
+					<li><img src="images/5.jpg"></li>
+					<li><img src="images/1.jpg"></li>
+					<li><img src="images/4.jpg"></li>
+					<li><img src="images/5.jpg"></li>
+				</ul>
+                
+                <div id="temp" style="display:none">
+                	<img src="images/1.jpg">
+                </div>	
+              
+               	
+				<div class="pager">
+				</div>
+                
+          	</div>
+            	<div class="col-md-2 col-lg-2" style="position:absolute;left:850px;background-color:#F5EDED;width:200px ;opacity:0.8;padding:3px">
+                	<a  ><img class="img-responsive img-responsive" src="images/11.JPG" onMouseOver="show(1)"  onMouseOut="hide()"/></a>
+                    
+                    <a><img class="img-responsive img-responsive" src="images/12.JPG" onMouseOver="show(4)"  onMouseOut="hide()" /></a>
+                    <a><img class="img-responsive img-responsive" src="images/13.JPG" onMouseOver="show(5)"  onMouseOut="hide()" /></a>
+                    
+                </div>
+            </div>
+            
+            
+		</div>
+        <div class="panel-footer">
+        
+        Developed & Maintained by Ankur Bag
+        
+        </div>
+
+    </body>
+</html>

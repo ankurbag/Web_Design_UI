@@ -1,0 +1,25 @@
+Chapter 9
+-----------------------------------------------------------------------------------------------------------
+1.When an element is floated, following are the rules applied:
+ a.The margins of floated elements do not collapse, no matter what they are next to.
+ b.A floated element is always treated like a block element.
+ c.Only the contents of elements inside shrink
+ 
+2.
+When an inline element like span is floated , the element is floated like a block element to the destined direction and elements folowing it may or may not be affected.
+
+3.Three keywords of float : left,right and none
+
+4. If an element is floated to the right, and we don’t want the following element to wrap around it :
+	clear : both  clear : right
+
+5.Superscript - vertical-align:super;
+  Subscript - vertical-align:sub; 
+
+6.When vertically aligning an inline element to the middle , the selected element is aligned to the middle with respect to the center point of the lowercase letter x.
+
+7.
+Text-top :keyword causes alignment to happen with respect to the tallest character of the font of the surrounding text
+Top : keyword causes the element to aligned with the top of  line box
+
+8.If we are aligning Table cells to the baseline,the line-height of the content prefferably the first row of the table.

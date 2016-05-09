@@ -1,0 +1,36 @@
+1.
+Specificity of each selector are as follows:
+0112
+
+0113
+
+0123 
+
+0224
+
+0246
+
+0224
+
+0176
+
+2.
+The color of the link:
+i: when link is not visited blue.
+ii: when visited is purple
+iii: when hovered,focus is green
+iv:when clicked red
+
+3.
+The color of the link:
+blue.
+as the specificity is same as other selectord.
+
+4.
+The color of the link:
+when link is not visited :  blue.
+i:when visited is purple and remains purple
+ii:when link active (when not visited) is red 
+iii:when link is hovered or when not visited is green
+
+

@@ -1,0 +1,45 @@
+1. Why aren’t the values of the font-weight property 100 through 900, bolder, and lighter used
+in real-world web design?
+Ans 1 The font-weight property has several values. Despite all of these different values being available for the font-weight property, in real-world web design, a font is either bold or it isn’t. There are only two values :the normal and bold values. Hence the values of the font-weight property 100 through 900, bolder, and lighter used
+in real-world web design
+----------------------------------------------------------------------------------------------------------------------
+2. How could the following rules be better written?
+Ans 2 
+Better Way : 
+p {
+ font-family: Arial, sans-serif;
+ font-weight: bold;
+ font-size: 24px;
+ color: crimson;
+}
+p.copy {
+ font-style: italic;
+}
+p.copy,p#footer{
+	line-height: 2em;
+}
+p#footer {
+ font-size: 12px;
+ font-family: Helvetica, Arial, sans-serif;
+}
+----------------------------------------------------------------------------------------------------------------------
+Ans 3 The better way to write 
+p
+ {
+ font-size: 24;
+}
+are the following ways: 
+way 1:
+p {
+ font-size: 2.4em;
+}
+or
+way 2:
+p {
+ font-size: 240%;
+}
+
+The problem with the absolute size is : Some browsers like IE donot give the flexibility of resizing the fonts.
+while relative sizings like em or % give user the flexibilty to size
+----------------------------------------------------------------------------------------------------------------------
+Ans 4 font-size: 75%; would neither make font size smaller or larger, but would give relativity or flexibility to the user to adjust.

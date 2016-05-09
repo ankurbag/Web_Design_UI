@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<script type="text/javascript">
+function convertToCentigrade(degFahrenite)
+{
+var degCentigrade = 5 / 9 * (degFahrenite - 32);
+return degCentigrade;
+}
+function btnToCent_onclick()
+{
+var calcBox = document.form1.txtCalcBox;
+if (isNaN(calcBox.value) == true || calcBox.value == "")
+{
+calcBox.value = "Error Invalid Value";
+}
+else
+{
+calcBox.value = convertToCentigrade(calcBox.value);
+}
+}
+</script>
+</head>
+
+<body>
+<form action="" name="form1">
+<p>
+<input type="text" name="txtCalcBox" value="0.0" />
+</p>
+<input type="button" value="Convert to centigrade" name="btnToCent" onclick="btnToCent_onclick()" />
+</form>
+</body>
+</html>

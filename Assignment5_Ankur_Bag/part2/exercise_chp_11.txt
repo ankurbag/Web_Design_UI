@@ -1,0 +1,15 @@
+Chapter 11
+----------------------------------------------------------------------------
+1. The default value is auto
+
+2. The offset properties left,right,top and bottom are used for positioning or adjusting the elements predominantly in the the relative positioning.
+
+3. All absolutely positioned elements are positioned relative to the viewport.If any child element is positioned absolute point of reference for positioned elements is the parent element.So for sole child element withing <body> , the point of reference should be the viewport of the device.
+
+4.If any child element is positioned absolute within a relative positioned element, point of reference for absolute positioned element is the parent element.
+
+5.Elements with a fixed position are always positioned relative to the viewport, regardless of whether they are contained in an element with relative or absolute positioning applied.Thus for an element with fixed position within a relatively positioned parent should be according to the viewport of the browser.
+
+6.An element with greater stack order is always in front of an element with a lower stack order.So the last element will be stacked as the latest element.
+So the z index declaration will be -
+z-index: 1;, z-index: 2;, z-index: 3;, z-index: 4;, z-index: 5;

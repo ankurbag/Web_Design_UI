@@ -1,0 +1,63 @@
+Chapter 7:
+-------------------------------------------------------------------------------------------------
+1. What are two properties that you can use to specify a background color in a web page?
+Way 1:
+body{
+background-color : <Hexadecimalvalue of color> or <color name>
+}
+eg:
+body{
+background-color : #000000;
+}
+will set the background to Black.
+
+Way 2:
+body {
+ background: #CCC url(bg-page.png) repeat-x fixed top right;
+ }
+-------------------------------------------------------------------------------------------------
+2. What declaration causes a background image to be tiled only along the x-axis?
+Ans :The 'background-repeat : repeat-x' keyword limits tiling to the horizontal or x-axis
+body{
+ background-image : (uri of the image);
+ background-repeat : repeat-x
+}
+-------------------------------------------------------------------------------------------------
+3. What keyword value can you use to turn off tiling of a background image?
+
+Ans :The 'background-repeat :none' keyword  turn offs tiling of a background image
+body{
+ background-image : (uri of the image);
+ background-repeat : none
+}
+-------------------------------------------------------------------------------------------------
+4. If you wanted to off set an image ten pixels from the left and ten pixels from the top, what
+declaration would you use?
+Ans :
+body {
+    background-image: url(URI);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 10px 10px;
+} 
+where background-position: 10px(x-axis) 10px(y-axis);
+-------------------------------------------------------------------------------------------------
+5. If you wanted a background image to scroll with the document, what declaration would you use?
+Ans:
+The background-attachment property provides the scrolling effect. By default, the background
+image scrolls with the content of the web page; this is the behavior of the
+'background-attachment: scroll'
+
+Eg.:
+<style type=”text/css”>
+ body {
+ background-image: url(bg-page.png);
+ background-attachment: scroll;
+ }
+ </style>
+-------------------------------------------------------------------------------------------------
+6. When a background image is said to be “fixed,” what HTML element is the background image
+position relative to?
+Ans : When the fixed keyword is provided, the background image’s position is
+set relative to the viewport, no matter what element the background image
+is applied to the body.

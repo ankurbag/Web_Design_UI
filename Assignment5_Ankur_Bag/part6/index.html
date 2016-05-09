@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>afterHours Eventbooking</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="jumbotron" >
+<h1>Events Space</h1>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">afterHours</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Create Event</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+
+
+<div class="container">
+  <div class="row">
+  	<div class="col-xs-6 col-md-8">
+    	<h2>
+        	<span class="label label-success">1</span>  Event Details 
+        </h2>
+         <form role="form">
+            <div class="form-group">
+	         	<label for="usr" >Event Name:</label>
+    			<input type="text" class="form-control" id="usr" placeholder="Enter Event name">
+         		<label for="sel2">Day/Date(s) of Event (note rehearsals):</label>
+                 <select multiple class="form-control" id="sel2">
+                    <option>10/10/2015</option>
+                    <option>10/17/2015</option>
+                    <option>10/24/2015</option>
+                    <option>10/31/2015</option>
+                    <option>11/01/2015</option>
+                    <option>11/08/2015</option>
+                    <option>11/15/2015</option>
+                    <option>11/22/2015</option>
+                 </select>
+                 
+                <label for="sel1">Student Organization/Department (select one):</label>
+                  <select class="form-control" id="sel1">
+                    <option>Information Systems</option>
+                    <option>Computer Systems</option>
+                    <option>Engineering Management</option>
+                    <option>Telecomunication Management</option>
+                  </select>  
+                <label for="contact" >Contact Name/Position :</label>
+    			<input type="text" class="form-control" id="contact" placeholder="Enter contact person name">           
+                <label for="phno" >Phone Number:</label>
+    			<input type="text" class="form-control" id="usr" placeholder="Enter contact person name"> 
+                 <label for="email">Email:</label>
+              <input type="email" class="form-control" id="email" placeholder="Enter email">
+               <label for="startTime" > Start Time:</label>
+    		   <input type="text" class="form-control" id="startTime" placeholder="Enter start time"> 
+              <label for="endTime" > End Time:</label>
+    		   <input type="text" class="form-control" id="endTime" placeholder="Enter end time"> 
+             <label for="event"> Description of Event:</label>
+             <h6>(Please include names and order of Performers/Speakers; attach
+an extra sheet if necessary)</h6>
+               <textarea class="form-control" rows="5" id="event"></textarea>
+            
+  		</form>
+	</div>
+    <!-- row - left-->
+    <div class="col-xs-6 col-md-4">
+    	
+    </div>
+    <!-- row -right-->
+    </div>
+    <!-- row 2-->
+    </div>
+    
+ <div class="row">
+  	<div class="col-xs-6 col-md-8">
+    	<h2>
+        	<span class="label label-success">2</span> Location Details 
+        </h2>
+         <form role="form">
+            <div class="form-group">
+	        
+                <div class="checkbox">
+                  <label><input type="checkbox"> Blackman Auditorium</label>
+                  <label><input type="checkbox"> Fenway Center</label>
+                  <label><input type="checkbox"> Kerr Hall</label>
+                  <label><input type="checkbox"> afterHours</label>
+                </div>
+            
+            </div>
+  		</form>
+	</div>
+    <!-- row - left-->
+    <div class="col-xs-6 col-md-4">
+    	<img src="images/Calender-icon.png" class="img-responsive" />
+    </div>
+    <!-- row -right-->
+ </div>
+     
+ <div class="row">
+  	<div class="col-xs-6 col-md-8">
+    	<h2>
+        	<span class="label label-success">3</span> Create Ticket 
+        </h2>
+         <form role="form">
+            <div class="form-group">
+	         	<label for="usr" > Ticket Prices (N/A for Kerr & afterHOURS):</label>
+    			<input type="text" class="form-control" id="usr" placeholder="Ticket prices">
+         		<div class="row">
+                	<div class="col-xs-6">
+                    <label for="usr" > # of Attendees/tickets to be printed:</label>
+    			    <label for="usr" > NU Student ONLY $ General Public:</label>
+    			    <label for="usr" > Tickets are to be sold:</label>
+    			    </div>
+                    <div class="col-xs-6">
+                    <input type="text" class="form-control" id="usr" placeholder="Ticket prices">
+                    <input type="text" class="form-control" id="usr" placeholder="Ticket prices">
+                    <input type="text" class="form-control" id="usr" placeholder="Ticket prices">
+                    </div>
+                </div>
+                
+              </div> 
+  		</form>
+	</div>
+    <!-- row - left-->
+    <div class="col-xs-6 col-md-4">
+    	<img src="images/create-ticket-icon.png" class="img-responsive" />
+    </div>
+    <!-- row -right-->
+  	<div class="row">
+  	<div class="col-xs-12 col-md-12">
+    	<h2>
+        	<span class="label label-success">4</span> My Declaration 
+        </h2>
+    	<form role="form">
+            <div class="form-group">
+	        
+                <div class="checkbox">
+                  <label><input type="checkbox"> I have read and understand the above rules as listed in the Event Information Agreement as well as all University policies, the laws of the Commonwealth of Massachusetts. I also understand that it is my responsibility to share this information with my group. I understand that if I don't follow these rules, there may be disciplinary sanctions against me and my group.</label>
+                 </div>
+                 
+                 <label for="contact" >Name of Student Group:</label>
+    			<input type="text" class="form-control" id="contact" placeholder="Enter contact person name">           
+                <label for="phno" >Name of Student Group Representative filling out the Form:</label>
+    			<input type="text" class="form-control" id="usr" placeholder="Enter contact person name"> 
+                 <div class="row">
+                       <div class="col-xs-6"><label for="email">Signature:</label>
+                      <input type="email" class="form-control" id="email" placeholder="Enter email"></div>
+                      <div class="col-xs-6"><label for="startTime" >Date:</label>
+    		   		   <input type="text" class="form-control" id="startTime" placeholder="Enter start time"></div>
+                 </div>
+                 
+                 <div class="row">
+                       <div class="col-xs-6"><label for="email">Signature:</label>
+                      <input type="email" class="form-control" id="email" placeholder="Enter email"></div>
+                      <div class="col-xs-6"><label for="startTime" >Date:</label>
+    		   		   <input type="text" class="form-control" id="startTime" placeholder="Enter start time">
+                       <button type="submit" class="btn btn-primary">Submit</button>
+                       </div>
+                 </div>
+                   
+             </div>
+          
+            
+  		</form>
+	</div>
+    <!-- row - left-->
+    
+    <!-- row -right-->
+ </div>
+ 
+ <!--<nav class="navbar navbar-inverse navbar-fixed-bottom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Developed & maintained By</a>
+    </div>
+    <div>
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Ankur Bag</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+ </div>-->
+  
+ 
+
+</body>
+</html>

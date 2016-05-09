@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<style>
+	.row{
+		 background-color:#F1F1F1;
+	}
+	#mover.colored {
+    	 background-color: green;
+  	}
+	.color-red {
+    	 background-color: red;
+		 border:1px solid green;
+		 color:white;
+  	}
+	.color-blue {
+    	 background-color:#478FFF ;
+		 border:1px solid white;
+		 color:white;
+  	}
+	div#mover{
+		background: yellow;
+		border: 1px solid #AAA;
+		width: 80px;
+		height: 80px;
+		margin: 0 5px;
+		float: left;
+	}
+	.buttonColor{
+		text-emphasis:center;
+		text-shadow:#875A5B;
+		color:#FDFBFB;
+	}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#btn1").click(function(){
+        $("[href]").toggle();/**Attribute Selector **/
+    });
+	$("#btn2").click(function(){
+        $("[href*=google]").toggle();/**Attribute Selector with contains**/
+    });
+	$("#btn3").click(function(){
+        $("[rel~=bing]").toggle();/**Attribute Selector with contains**/
+    });
+	$("#btn4").click(function(){
+        $("[href$=in]").toggle();/**Attribute Selector ends with**/
+    });
+	$("#btn5").click(function(){
+         $('p[lang|="en"]').css('color', 'red');/**Selects all elements with the specified attribute name and a value equal to the specified string or prefixed with that string followed by a hyphen (-).**/
+    });
+	$("#btn6").click(function(){
+         $("*").toggle();/**Selects all elements .**/
+    });
+	/**Class Selectors **/
+	$("#btn7").click(function(){
+         $(".row").css('background-color','#FF8E8E');
+    });
+	$("#btn8").click(function(){
+         $(".row").css('background-color','#9FDEDE');
+    });
+	$("#btn9").click(function(){
+         $(".row").css('background-color','#AEB2E6');
+    });
+	$("#btn10").click(function(){
+         $(".row").css('background-color','#F1F1F1');
+    });
+	/**Element Selector **/
+	$("#btn11").click(function(){
+         $( "div" ).css( "border", "1px solid red" );
+    });
+	$("#btn12").click(function(){
+         $( "div" ).css( "border", "1px solid aqua" );
+    });
+	$("#btn13").click(function(){
+         $( "div" ).css( "border", "1px solid indigo" );
+    });
+	$("#btn14").click(function(){
+         $( "div" ).css( "border", "none" );
+    });
+	/**Multi Selectors **/
+	$("#btn15").click(function(){
+         $( "div, p" ).css( "border", "1px solid green" );
+    });
+	$("#btn16").click(function(){
+         $( "div, p" ).css( "border", "none" );
+    });
+	/**:ANIMATED **/
+	$( "#run" ).click(function() {
+	  $( "div:animated" ).toggleClass( "colored" );
+	  animateIt();
+	});
+	$( "#stop" ).click(function() {
+	  $("#mover").hide();
+	});
+	 
+	function animateIt() {
+	  $( "#mover" ).slideToggle( "slow", animateIt );
+	}
+	 
+	
+	/** :EQ sELECTOR**/
+	$("#btn17").click(function(){
+         $( "div:eq( 2 )" ).toggleClass( "color-red" );
+		 $( "p:eq( 2 )" ).toggleClass( "color-red" );
+		 $( "td:eq( 2 )" ).toggleClass( "color-red" );
+    });
+	/** :EVEN sELECTOR**/
+	$("#btn18").click(function(){
+         $( "div:even" ).toggleClass( "color-blue" );
+		 $( "p:even" ).toggleClass( "color-blue" );
+		 $( "tr:even" ).toggleClass( "color-blue" );
+    });
+	/**Child Selector **/
+	$( "#demo span:first-child" )
+	  .css( "text-decoration", "underline" )
+	  .hover(function() {
+		$( this ).addClass( "color-blue" );
+	  }, function() {
+		$( this ).removeClass( "color-blue" );
+	  });
+	  
+	  $( "#demo1 span:first-child" )
+	  .css( "text-decoration", "underline" )
+	  .hover(function() {
+		$( this ).addClass( "color-red" );
+	  }, function() {
+		$( this ).removeClass( "color-red" );
+	  });
+	  
+	  $( "#demo span:last-child" )
+	  .css( "color", "red" )
+	  .hover(function() {
+		$( this ).addClass( "color-blue" );
+	  }, function() {
+		$( this ).removeClass( "color-blue" );
+	  });
+	  
+	  $( "#demo1 span:last-child" )
+	  .css( "color", "blue" )
+	  .hover(function() {
+		$( this ).addClass( "color-red" );
+	  }, function() {
+		$( this ).removeClass( "color-red" );
+	  });
+	  
+	  /* first of type**/
+	  $( "#demo2 span:first-of-type" )
+	  .css( "text-decoration", "underline" )
+	  .hover(function() {
+		$( this ).addClass( "color-blue" );
+	  }, function() {
+		$( this ).removeClass( "color-blue" );
+	  });
+	  
+	  $( "#demo3 span:first-of-type" )
+	  .css( "text-decoration", "underline" )
+	  .hover(function() {
+		$( this ).addClass( "color-red" );
+	  }, function() {
+		$( this ).removeClass( "color-red" );
+	  });
+	  
+	  /* first of type**/
+	  $( "#demo2 span:first-of-type" )
+	  .css( "text-decoration", "underline" )
+	  .hover(function() {
+		$( this ).addClass( "color-blue" );
+	  }, function() {
+		$( this ).removeClass( "color-blue" );
+	  });
+	  
+	  $( "#demo3 span:first-of-type" )
+	  .css( "text-decoration", "underline" )
+	  .hover(function() {
+		$( this ).addClass( "color-red" );
+	  }, function() {
+		$( this ).removeClass( "color-red" );
+	  });
+	  
+	  /**contains **/
+	  /*$("div:contains('Ankur')").css("text-decoration","underline");*/
+	  var input = $( ":button" ).addClass( "buttonColor" );
+		$( "#msg" ).text( "For this type jQuery found " + input.length + "." );
+		// Prevent the form from submitting
+		$( "form" ).submit(function( event ) {
+		  event.preventDefault();
+		});
+	/**:checkbox **/	
+	 var input = $( "form input:checkbox" )
+	  .wrap( "<span></span>" )
+	  .parent()
+	  .css({
+		background: "yellow",
+		border: "3px red solid"
+	  });
+	 
+	$( "#msg2" )
+	  .text( "For this type jQuery found " + input.length + "." )
+	  .css( "color", "red" );
+	 
+	// Prevent the form from submitting
+	$( "form" ).submit(function( event ) {
+		event.preventDefault();
+	});
+	/**:checked **/
+	var countChecked = function() {
+	  var n = $( "input:checked" ).length;
+	  $( "#msg3" ).text( n + (n === 1 ? " is" : " are") + " checked!" );
+	};
+	countChecked();
+	 
+	$( "input[type=checkbox]" ).on( "click", countChecked );
+	
+	/**Hierrarchy **/
+	  $( "ul.topnav > li" ).css( "border", "3px double red" );
+	  $( "form input" ).css( "border", "2px dotted blue" );
+      $( "form fieldset input" ).css( "backgroundColor", "yellow" );
+	  $( "label + input" ).css( "color", "blue" ).val( "Labeled!" );
+	  
+	  /**Extension **/
+	  $( ":header" ).css({ color: "blue" });
+		var allInputs = $( ":input" );
+		var formChildren = $( "form > *" );
+		$( "#msg4" ).text( "Found " + allInputs.length + " inputs and the form has " +
+		  formChildren.length + " children." );
+		 
+		$( "form" ).submit(function( event ) {
+		  event.preventDefault();
+		});
+		/** Hidden Selector**/
+		// In some browsers :hidden includes head, title, script, etc...
+		var hiddenElements = $( "body" ).find( ":hidden" ).not( "script" );
+		 
+		$( "span:first" ).text( "Found " + hiddenElements.length + " hidden elements total." );
+		$( "div:hidden" ).show( 3000 );
+		$( "span:last" ).text( "Found " + $( "input:hidden" ).length + " hidden inputs." );
+
+
+});
+</script>
+</head>
+<body>
+<div class="page-header">
+<h1>Part 3 Demo :Selection of Elements</h1>
+</div>
+<div class="container">
+	<div class="page-header">
+    	<h2>Attribute Selectors</h2>
+    </div>
+    <div class="row">
+        <h3><span class="label label-success"><span class="badge">1</span> Attribute Contains Prefix Selector [name=value]</span></h3>
+        <p><a href="http://www.google.com">Google</a></p>
+        <p><a href="http://www.bing.com">Bing</a></p>
+        
+        <button id="btn1" class="btn btn-danger">Click me</button>
+    </div>
+
+	<div class="row">
+        <h3><span class="label label-success"><span class="badge">2</span>Attribute Contains Selector[name*=value]</span></h3>
+        <p><a href="http://www.google.com">Google</a></p>
+        <p><a href="http://www.bing.com">Bing</a></p>
+        
+      <button id="btn2" class="btn btn-danger">Click me</button>
+    </div>
+
+	<div class="row">
+        <h3><span class="label label-success"><span class="badge">3</span>Attribute Contains Word Selector [name~=value]</span></h3>
+        <p><a href="http://www.google.com" rel="this is google link">Google</a></p>
+        <p><a href="http://www.bing.com" rel="this is bing link">Bing</a></p>
+        
+        <button id="btn3" class="btn btn-danger">Click me</button>
+    </div>
+
+	<div class="row">
+        <h3><span class="label label-success"><span class="badge">4</span>Attribute Ends With Selector [name$=value]</span></h3>
+        <p><a href="http://www.google.com" rel="this is google link">Google</a></p>
+        <p><a href="http://www.irctc.co.in" rel="this is bing link">IRCTC</a></p>
+        
+        <button id="btn4" class="btn btn-danger">Click me</button>
+    </div>
+    
+    <div class="row">
+        <h3><span class="label label-success"><span class="badge">5</span>Attribute Ends With Selector [name|=value]</span></h3>
+       <p lang="en">A paragraph with a lang attribute and en subcode.</p>
+       <p lang="en">A paragraph with a lang attribute and en subcode.</p>
+       <p lang="nl">A paragraph with a lang attribute and nl subcode.</p>
+       <p lang="en-us">A paragraph with a lang attribute and en-us subcode.</p>
+       <p lang="fr">A paragraph with a lang attribute and fr subcode.</p>
+       <p lang="en-us">A paragraph with a lang attribute and en-gb subcode.</p>
+        
+        <button id="btn5" class="btn btn-danger">Click me</button>
+    </div>
+
+	<div class="page-header">
+    	<h2>Basic Class Selectors</h2>
+    </div>
+    <div class="row">
+        <h3><span class="label label-success"><span class="badge">1</span>All Selector ("*")</span></h3>
+        <p > This will select all the elements on the page and toggle them</p>
+        
+        <button id="btn6" class="btn btn-danger">Click me</button>
+    </div>
+    <div class="row">
+    	<h3><span class="label label-success"><span class="badge">2</span>Class Selector (.class)</span></h3>
+        <p > This will select all the elements with same class and change the color of the background color.</p>
+        
+        <button id="btn7" class="btn btn-danger">Red</button>
+        <button id="btn8" class="btn btn-info">Aqua</button>
+        <button id="btn9" class="btn btn-primary">Indigo</button>
+        <button id="btn10" class="btn btn-default">Default</button>
+    	
+    </div>
+
+ 	<div class="row">
+    	<h3><span class="label label-success"><span class="badge">3</span>Element Selector ("element")</span></h3>
+        <p > This will select all the elements with div tag and will give a border.</p>
+        
+        <button id="btn11" class="btn btn-danger">Red</button>
+        <button id="btn12" class="btn btn-info">Aqua</button>
+        <button id="btn13" class="btn btn-primary">Indigo</button>
+        <button id="btn14" class="btn btn-default">Default</button>
+    	
+    </div>
+    
+   
+    <div class="row">
+    	<h3><span class="label label-success"><span class="badge">4</span>Multiple Selector ("selector1, selector2, selectorN")</span></h3>
+        <p > This will select all the elements with div tag,p tag and will give a border.</p>
+        
+        <button id="btn15" class="btn btn-success" >Green</button>
+        
+        <button id="btn16" class="btn btn-default">Default</button>
+    	
+    </div>
+ 	<div class="page-header">
+    	<h2>Basic Filter Selectors</h2>
+    </div>
+    <div class="row">
+    	<h3><span class="label label-success"><span class="badge">1</span>:animated selector</span></h3>
+         <button id="run" class="btn btn-success">Green</button>
+          <button id="stop" class="btn btn-danger">Stop</button>
+        <div id="mover"></div>
+         <br>
+    </div>
+    <div class="row">
+    	<h3><span class="label label-success"><span class="badge">2</span>::EQ selector</span></h3>
+        <table border="1">
+          <tr><td>TD #0</td><td>TD #1</td><td>TD #2</td></tr>
+          <tr><td>TD #3</td><td>TD #4</td><td>TD #5</td></tr>
+          <tr><td>TD #6</td><td>TD #7</td><td>TD #8</td></tr>
+        </table>
+         <button id="btn17" class="btn btn-danger">Turn Second Div,P and TD tags Red</button>
+       
+         <br>
+    </div>
+    
+    <div class="row">
+    	<h3><span class="label label-success"><span class="badge">3</span>:EVEN selector</span></h3>
+       
+         <button id="btn18" class="btn btn-info">Turn All Even p,div,tr tags blue </button>
+       
+         <br>
+    </div>
+    <div class="page-header">
+    	<h2>Child Filter Selectors</h2>
+    </div>
+    <div class="row">
+    	<h3><span class="label label-success"><span class="badge">1</span>jQuery( ":first-child" ) selector<span class="badge">2</span>jQuery( ":last-child" ) selector</span>							</h3>
+         <div id="demo">
+          <span>John,</span>
+          <span>Karl,</span>
+          <span>Brandon</span>
+        </div>
+        <div id="demo1">
+          <span>Glen,</span>
+          <span>Tane,</span>
+          <span>Ralph</span>
+        </div>
+        
+       
+    </div>
+    
+    <div class="row">
+    	<h3><span class="label label-success"><span class="badge">3</span>jQuery( ":first-of-type" ) selector</span>							</h3>
+         <div id="demo2">
+          <span>John,</span>
+          <span>Karl,</span>
+          <span>Brandon</span>
+        </div>
+        <div id="demo3">
+          <span>Glen,</span>
+          <span>Tane,</span>
+          <span>Ralph</span>
+        </div>
+        
+       
+    </div>
+    
+    <div class="page-header">
+    	<h2>Content Filter Selectors</h2>
+    </div>
+    <div class="row">
+            <h3><span class="label label-success"><span class="badge">1</span>:contains() Selector selector</span>						</h3>
+       <div>Ankur</div>
+        <div>George Martin</div>
+        <div>Malcom John Sinclair</div>
+        <div>J. Ohn</div> 
+       
+    </div>
+     <div class="page-header">
+    	<h2>Form Selectors</h2>
+    </div>
+    <div class="row">
+    	<h3><span class="label label-success"><span class="badge">1,2,3</span>button /checkbox / checked Selector selector</span>							</h3>
+        <form>
+      <fieldset>
+        <input type="button" value="Input Button">
+        <input type="checkbox">
+     
+        <input type="file">
+        <input type="hidden">
+        <input type="image">
+     
+        <input type="password">
+        <input type="radio">
+        <input type="reset">
+     
+        <input type="submit">
+        <input type="text">
+        <select>
+          <option>Option</option>
+        </select>
+     
+        <textarea></textarea>
+        <button>Button</button>
+          <p>
+            <input type="checkbox" name="newsletter" value="Hourly" checked="checked">
+         
+            <input type="checkbox" name="newsletter" value="Daily">
+            <input type="checkbox" name="newsletter" value="Weekly">
+         
+            <input type="checkbox" name="newsletter" value="Monthly" checked>
+            <input type="checkbox" name="newsletter" value="Yearly">
+          </p>
+      </fieldset>
+    </form>
+       <div id="msg"></div>
+       <div id="msg2"></div>
+       <div id="msg3"></div>
+    </div>
+    
+    
+    
+    <div class="page-header">
+    	<h2>Hierarchy</h2>
+    </div>
+    <div class="row">
+            <h3><span class="label label-success"><span class="badge">1</span>Child Selector (parent &gt; child) </span>						</h3>
+       <ul class="topnav">
+      <li>Item 1</li>
+      <li>Item 2
+        <ul>
+        <li>Nested item 1</li>
+        <li>Nested item 2</li>
+        <li>Nested item 3</li>
+        </ul>
+      </li>
+      <li>Item 3</li>
+    </ul>
+    <h3><span class="label label-success"><span class="badge">2</span>Descendant Selector (ancestor descendant)</span>						</h3>
+   <form>
+      <div>Form is surrounded by the green border.</div>
+     
+      <label for="name">Child of form:</label>
+      <input name="name" id="name">
+     
+      <fieldset>
+        <label for="newsletter">Grandchild of form, child of fieldset:</label>
+        <input name="newsletter" id="newsletter">
+      </fieldset>
+    </form>
+    Sibling to form: <input name="none">
+     <h3><span class="label label-success"><span class="badge">3</span>Next Adjacent Selector ("prev + next")</span>						</h3>
+       <form>
+      <label for="name">Name:</label>
+      <input name="name" id="name1">
+      <fieldset>
+        <label for="newsletter">Newsletter:</label>
+        <input name="newsletter" id="newsletter1">
+      </fieldset>
+    </form>
+    <input name="none">
+    
+    
+     <div class="page-header">
+    	<h2>Category: jQuery Extensions</h2>
+    </div>
+    <div class="row">
+    	<span id="msg4"></span>
+    </div>
+     <div class="page-header">
+    	<h2>Category: Hidden/Visible Slectors</h2>
+    </div>
+    <div class="row">
+        <span></span>
+    <div></div>
+    <div style="display:none;">Hider!</div>
+    <div></div>
+     
+    <div class="starthidden">Hider!</div>
+    <div></div>
+     
+    <form>
+      <input type="hidden">
+      <input type="hidden">
+      <input type="hidden">
+    </form>
+    </div>
+    </div>
+    
+        
+</div>
+
+
+    
+<div class="panel-footer">
+Developed & maintained by Ankur Bag
+</div>
+
+<script>
+$( "div div div:contains('Ankur')" ).css( "text-decoration", "underline" );
+</script>
+</body>
+</html>

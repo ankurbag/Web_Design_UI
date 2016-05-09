@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<style>
+	.row{
+		 background-color:#F1F1F1;
+	}
+	#mover.colored {
+    	 background-color: green;
+  	}
+	.color-red {
+    	 background-color: red;
+		 border:1px solid green;
+		 color:white;
+  	}
+	.color-blue {
+    	 background-color:#478FFF ;
+		 border:1px solid white;
+		 color:white;
+  	}
+	div#mover{
+		background: yellow;
+		border: 1px solid #AAA;
+		width: 80px;
+		height: 80px;
+		margin: 0 5px;
+		float: left;
+	}
+	.buttonColor{
+		text-emphasis:center;
+		text-shadow:#875A5B;
+		color:#FDFBFB;
+	}
+	
+  p {
+    margin: 8px;
+    font-size: 16px;
+	background-color:#CEE88B;
+  }
+  .selected {
+    color: blue;
+  }
+  .selected2 {
+    color: red;
+  }
+  .highlight {
+    background: yellow;
+  }
+   #one {
+    background: #f00;
+  }
+  #two {
+    background: #0f0;
+  }
+  #three {
+    background: #00f;
+  }
+    #d1,#d2 {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    float: left;
+  }
+  .first {
+    background-color: #3f3;
+    left: 0;
+  }
+  .second {
+    background-color: #33f;
+    left: 80px;
+  }
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $( "#demo1" ).last().addClass( "selected" );
+	$( "#demo2" ).after("<b>Hello</b>");
+	$( "#demo3" ).append("<b>Hello</b>");
+	$( "input" )
+    .change(function() {
+    var $input = $( this );
+    $( "#demo11" ).html( ".attr( 'checked' ): <b>" + $input.attr( "checked" ) + "</b><br>" +
+      ".prop( 'checked' ): <b>" + $input.prop( "checked" ) + "</b><br>" +
+      ".is( ':checked' ): <b>" + $input.is( ":checked" ) + "</b>" );
+    })
+   .change();
+   
+   $( "#result1" ).append( $( "#p1" ).hasClass( "selected2" ).toString() );
+	$( "#result2" ).append( $( "#p2" ).hasClass( "selected2" ).toString() );
+	$( "#result3" ).append( $( "p" ).hasClass( "selected2" ).toString() ) ;
+	
+	(function() {
+  var inputTitle = $( "input" ).attr( "title" );
+  $( "#btn1" ).click(function() {
+    var input = $( this ).next();
+ 
+    if ( input.attr( "title" ) === inputTitle ) {
+      input.removeAttr( "title" )
+    } else {
+      input.attr( "title", inputTitle );
+    }
+ 
+    $( "#log" ).html( "input title is now " + input.attr( "title" ) );
+  });
+  })();
+ 
+ $( document.body ).click(function() {
+  $( "div:hidden:first" ).fadeIn( "slow" );
+ });
+  
+  
+ 
+});
+</script>
+</head>
+<body>
+<div class="page-header">
+  <h1>Part 4 Demo</h1>
+</div>
+<div class="container">
+	<div class="page-header">
+    	<h2>Manipulation</h2>
+    </div>
+    <div class="row">
+        <h3><span class="label label-success"><span class="badge">1</span> .addClass()</span></h3>
+        <p>Hello</p>
+        <p>and</p>
+        <p id="demo1">Goodbye</p>
+        <h3><span class="label label-success"><span class="badge">2</span> .after()</span></h3>
+        <p id="demo2">I would like to say: </p>
+        <h3><span class="label label-success"><span class="badge">3</span> .append()</span></h3>
+        <p id="demo3">I would like to say: </p>
+        
+        
+        
+        
+    </div>
+    
+    <div class="page-header">
+    	<h2>Attributes</h2>
+    </div>
+    <div class="row">
+    <h3><span class="label label-success"><span class="badge">1</span> attr demo</span></h3>
+    <input id="check1" type="checkbox" checked="checked">
+	<label for="check1">Check me</label>
+	<p id="demo11"></p>
+     <h3><span class="label label-success"><span class="badge">2</span> .hasClass()</span></h3>
+     <p id="p1">This paragraph is black and is the first paragraph.</p>
+        <p id="p2" class="selected2">This paragraph is red and is the second paragraph.</p>
+        <div id="result1">First paragraph has selected class: </div>
+        <div id="result2">Second paragraph has selected class: </div>
+        <div id="result3">At least one paragraph has selected class: </div>
+     <h3><span class="label label-success"><span class="badge">3</span> .removeAttr()</span></h3>
+     <button id="btn1" class="btn btn-danger">Click me</button>
+    <input type="text" title="hello there">
+    <div id="log"></div>
+        </div>
+    
+    <div class="page-header">
+    	<h2>Effects</h2>
+    </div>
+    <div class="row">
+    	<h3><span class="label label-success"><span class="badge">1</span> Animate</span></h3>
+    	<button id="go1">&raquo; Animate Block1</button>
+        <button id="go2">&raquo; Animate Block2</button>
+        <button id="go3">&raquo; Animate Both</button>
+        <button id="go4">&raquo; Reset</button>
+        <div id="block1">Block1</div>
+        <div id="block2">Block2</div>
+ 
+
+    </div>
+    
+   <div class="row">
+    	<h3><span class="label label-success"><span class="badge">2</span> Delay </span></h3>
+    	<p><button id="run">Run</button></p>
+        <div id="d1" class="first"></div>
+        <div id="d2" class="second"></div>
+ 
+
+    </div> 
+    
+    <div class="row">
+    	<h3><span class="label label-success"><span class="badge">3</span> Show </span></h3>
+    	<p><button id="showIt">show</button></p>
+        <p style="display: none">Hello  2</p>
+    </div> 
+    
+    <div class="page-header">
+    	<h2>CSS</h2>
+    </div>
+    <div class="row">
+    	<h3><span class="label label-success"><span class="badge">1</span> .css </span></h3>
+    	<span id="result">&nbsp;</span>
+        <div style="background-color:blue;">
+        &nbsp;
+        </div>
+        <div style="background-color:rgb(15,99,30);">&nbsp;</div>
+        <div style="background-color:#123456;">&nbsp;</div>
+        <div style="background-color:#f11;">&nbsp;</div>
+        
+       	<h3><span class="label label-success"><span class="badge">2</span> .height </span></h3>
+    	 <button id="getp">Get Paragraph Height</button>
+		<button id="getd">Get Document Height</button>
+		<button id="getw">Get Window Height</button>
+        <div>&nbsp;</div>
+        <p>
+          Sample paragraph to test height
+        </p>
+        
+        <h3><span class="label label-success"><span class="badge">3</span> .removeClass </span></h3>
+    	<p class="blue under">Hello</p>
+		<p class="blue under highlight">and</p>
+		<p class="blue under">then</p>
+		<p class="blue under">Goodbye</p>
+        
+    </div>
+    
+   <div class="page-header">
+    	<h2>Events / Forms</h2>
+    </div>
+    <div class="row">
+    		<h3><span class="label label-success"><span class="badge">1</span> .bind </span></h3>
+    		<p id="binddemo">Click or double click here.</p>
+			<span id="s1"></span>
+            
+            <h3><span class="label label-success"><span class="badge">2</span> .blur </span></h3>
+    		<form>
+              <input id="target" type="text" value="Field 1">
+              <input type="text" value="Field 2">
+            </form>
+            <div id="other">
+              Trigger the handler
+            </div>
+            
+            <h3><span class="label label-success"><span class="badge">3</span> .change </span></h3>
+    		<form>
+              <input class="target" type="text" value="Field 1">
+              <select class="target">
+                <option value="option1" selected="selected">Option 1</option>
+                <option value="option2">Option 2</option>
+              </select>
+            </form>
+            <div id="other1">
+              Trigger the handler
+            </div>
+     </div>
+    
+    
+     <div class="page-header">
+    	<h2>traversing /Utilities</h2>
+    </div>
+    <div class="row">
+    	 <h3><span class="label label-success"><span class="badge"></span> .add / .contains /.type</span></h3>
+    	<div class="demox"></div>
+        <div class="demox"></div>
+        <div class="demox"></div>
+        <div class="demox"></div>
+        <div class="demox"></div>
+        <div class="demox"></div>
+		<p>Added this... (notice no border)</p>
+        Is it a RegExp? <b></b>
+		<script>
+		$( ".demox" ).css( "border", "2px solid red" )
+		  .add( "p" )
+		  .css( "background", "yellow" );
+		  $.contains( document.documentElement, document.body );
+		</script>	
+        <script>
+		$( "b" ).append( "" + jQuery.type( /test/ ) );
+		</script>
+    
+    </div>
+    
+    
+   
+	<script>
+	$( ".target" ).change(function() {
+	  alert( "Handler for .change() called." );
+	});
+	
+	$( "#target" ).blur(function() {
+              alert( "Handler for .blur() called." );
+            });
+	
+	$( "#binddemo" ).bind( "click", function( event ) {
+	  var str = "( " + event.pageX + ", " + event.pageY + " )";
+	  $( "#s1" ).text( "Click happened! " + str );
+	});
+	$( "#binddemo" ).bind( "dblclick", function() {
+	  $( "#s1" ).text( "Double-click happened in " + this.nodeName );
+	});
+	$( "#binddemo" ).bind( "mouseenter mouseleave", function( event ) {
+	  $( this ).toggleClass( "over" );
+	});
+	
+	$( "div" ).click(function() {
+	  var color = $( this ).css( "background-color" );
+	  //alert(color);
+	  $( "#result" ).html( "That div is " + color + "." );
+	});
+    $( "#showIt" ).click(function() {
+      $( "p" ).show( "slow" );
+    });
+	
+	function showHeight( element, height ) {
+	  $( "div" ).text( "The height for the " + element + " is " + height + "px." );
+	}
+	$( "#getp" ).click(function() {
+	  showHeight( "paragraph", $( "p" ).height() );
+	});
+	$( "#getd" ).click(function() {
+	  showHeight( "document", $( document ).height() );
+	});
+	$( "#getw" ).click(function() {
+	  showHeight( "window", $( window ).height() );
+	});
+    </script>       
+</div>
+
+<script>
+	$( "p:even" ).removeClass( "blue" );
+
+	$( "#go1" ).click(function() {
+	  $( "#block1" )
+		.animate({
+		  width: "90%"
+		}, {
+		  queue: false,
+		  duration: 3000
+		})
+		.animate({ fontSize: "24px" }, 1500 )
+		.animate({ borderRightWidth: "15px" }, 1500 );
+	});
+	 
+	$( "#go2" ).click(function() {
+	  $( "#block2" )
+		.animate({ width: "90%" }, 1000 )
+		.animate({ fontSize: "24px" }, 1000 )
+		.animate({ borderLeftWidth: "15px" }, 1000 );
+	});
+	 
+	$( "#go3" ).click(function() {
+	  $( "#go1" ).add( "#go2" ).click();
+	});
+	 
+	$( "#go4" ).click(function() {
+	  $( "div" ).css({
+		width: "",
+		fontSize: "",
+		borderWidth: ""
+	  });
+	});
+
+	$( "#run" ).click(function() {
+	  $( "div.first" ).slideUp( 300 ).delay( 800 ).fadeIn( 400 );
+	  $( "div.second" ).slideUp( 300 ).fadeIn( 400 );
+	});
+
+$( "p" ).bind( "click", function( event ) {
+  var str = "( " + event.pageX + ", " + event.pageY + " )";
+  $( "span" ).text( "Click happened! " + str );
+});
+$( "p" ).bind( "dblclick", function() {
+  $( "span" ).text( "Double-click happened in " + this.nodeName );
+});
+$( "p" ).bind( "mouseenter mouseleave", function( event ) {
+  $( this ).toggleClass( "over" );
+});
+</script>
+    
+<div class="panel-footer">
+Developed & maintained by Ankur Bag
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS2 Selectors Demo</title>
+<style>
+/*  Select all elements**/
+* {
+    background-image:url(images/blackStrip.png);
+	background-repeat:repeat-y;
+}
+/** element > element**/
+div > p{
+	border:#FF1F55 double;
+	font-family:Georgia, "Times New Roman", Times, serif;
+	font-style:italic
+}
+/** element + element**/
+div + p{
+	border:#FF1F55 dotted;
+	background-color:#A691A6;
+	color:#0E48E2
+}
+
+#centerPara{
+	text-align:justify;
+	
+	background-color:#A0E6EB;
+}
+/**The [attribute] selector is used to select elements with the specified attribute. **/
+a[target] {
+    background-color: yellow;
+	font-weight:bold;
+	font-size:18px;
+}
+/** CSS [attribute~=value] Selector **/
+[title~=flower] {
+    border: 5px solid yellow;
+}
+div p{
+	/**border:#2A1FAA thin double;
+	text-align:justify;**/
+	
+}
+h1,strong{
+	color:#0012F0;
+}
+#wrapper{
+	
+}
+#content{
+	/*padding: 10px 0;*/
+	width: 780px;
+	float: left;
+	background:#FFBFFF
+}
+.menu{
+	float: left;
+	width: 200px !important
+	background: #EADCAE;
+	padding-bottom: 10px;
+}
+ a{
+	display:block;
+	background-color:#EA7D11 ;
+	color:#2A1F00;
+	/**height:20px;*/
+	width:150px;
+	text-decoration:none;
+	line-height:50px;
+	border:#2A1FAA thin;
+	
+}
+/** p :: first child  **/
+p::first-child{
+	background-color:#FF0;
+	font-size:24px;
+	color:#F05;
+}
+p::after{background-color:#A39CEF}
+input:focus {
+    background-color: yellow;
+	border:#F00;
+	color:#2A1FFF;
+}
+</style>
+</head>
+
+<body>
+<h1>Welcome to My CSS2 Homepage</h1>
+<hr />
+<div id="wrapper">
+<div class="menu">
+	<a href="www.google.com" target="_blank">Summary</a>
+    <a href="#" target="_new">Experience</a>
+    <a href="#" target="_blank">Education</a>
+    <a href="#" target="_blank">Skills</a>
+</div>
+<p>Perfection is not attainable, but if we chase perfection we can catch excellence.' quoted by Vince Lombardi, is an apt reflection of the firm belief and perseverance <img src="images/flower.jpg" title="flower" width="150" height="113" alt="flower" /></p>
+<p>Enter your name : </p>
+<form id="form1" name="form1" method="post" action="">
+  <label for="namtTxt"></label>
+  <input type="text" name="namtTxt" id="namtTxt" />
+</form>
+<div id="content">
+  <p>Perfection is not attainable, but if we chase perfection we can catch excellence.' quoted by Vince Lombardi, is an apt reflection of the firm belief and perseverance </p>
+<div class="intro">
+      <p>Perfection is not attainable, but if we chase perfection we can catch excellence.' quoted by Vince Lombardi, is an apt reflection of the firm belief and perseverance.
+    
+    With this thought , I begin my day and saying to myself that I have to continuously work hard to achieve excellence. This is the strong motivation behind rebooting my career by going back to school at the Northeastern University for Masters in Information Systems, Boston.</p>
+     
+    </div>
+    <div id="centerPara">
+    <p><strong>Following is the brief summary</strong> :<br />
+    •	Currently Studying MS Information Systems Northeastern University, Boston<br />
+    •	3 years 3 months Experience in Application Development and maintenance in Java/J2EE<br />
+    •	Over 1.5 years’ Experience as Technical Trainer/Guest Speaker in Java / J2EE and Struts<br />
+    •	Oracle Certified Java Standard Edition 6 Programmer<br />
+    •	Oracle Certified Oracle 11g: SQL Fundamentals</p>
+    </div>
+    <div id="skills">
+    <p><strong>Skills Achieved</strong> :<br />
+    •	Java - J2EE and Java frameworks(Struts 1.3, Struts 2.0,2.3)<br />
+    •	DBMS Software/Tools: Oracle 10g, MySQL ,SQL Developer<br />
+    •	Tools Known : RAD 7.5, Eclipse, ReqPro ,Toad,HP Quality Center<br />
+    •	Web Technology : HTML , JavaScript,CSS<br />
+    <br /></p>
+    </div>
+    <div id="professionalExp">
+    <strong>Professional Experience</strong> :<br />
+    •	HSBC GLT India Pvt Ltd. Jun&rsquo;14 - Jul&rsquo;15<br />
+    •	IBM India Pvt Ltd. Apr&rsquo;12-Jun&rsquo;14<br />
+    •	Seed Infotech &amp; Kotech Software Aug&rsquo;13 - Jun &lsquo;15<br />
+    <br />
+    I had been best outgoing student at my undergraduate schools in   the year   2011 . Also actively participated in co-curricular and extra-     curricular activities.<br />
+    To sum up, I am a strong enthusiast of creative work and continuously look to attain perfection in whatever I do.</p>
+    </div>
+  </div>
+    </div>
+
+</body>
+</html>

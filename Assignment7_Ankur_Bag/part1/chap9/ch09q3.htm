@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+</head>
+<body>
+
+<script>
+   /*
+   Barred Words are the paswords
+   */
+   var myRegExp = /password|neu/gi;
+   var myString = "My password is dexter123#. My neu-password is sadasdasd123. My password is very strong and neu-password weak.";
+   myString = myString.replace(myRegExp,"knowledge");
+   document.write("<h2>This is encrypted file</h2>")
+   document.write(myString)
+</script>
+</body>
+</html>

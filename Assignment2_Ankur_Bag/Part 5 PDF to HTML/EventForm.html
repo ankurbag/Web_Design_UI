@@ -1,0 +1,287 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>After HOURS</title>
+</head>
+
+<body>
+<form action="" method="get" name="mainForm">
+	<table width="80%" border="0" align="center" bordercolor="#CCCCCC" cellpadding="0" >
+      <tr>
+        <th width="10%" scope="col">&nbsp;</th>
+        <th width="70%" colspan="4" scope="col" bgcolor="#CC6600"><font color="#FFFFFF"><h2 >EVENT INFORMATION AGREEMENT (EIA)</h2></font><hr color="#FF0000"></th>
+        <th width="20%" rowspan="14" scope="col">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      </tr>
+      <tr>
+        <th width="10%" scope="row">&nbsp;</th>
+        <td width="70%" colspan="4" bgcolor="#CCCC99"><i style="font-size:14px;color:#F00">*PLEASE fill out each section COMPLETELY and sign the agreement at the bottom of page</i></td>
+      </tr>
+  <tr>
+    <th width="10%" scope="row">&nbsp;</th>
+    <th width="70%" colspan="2" bgcolor="#CC6600"><font color="#FFFFFF">Event Details</font></th><th width="52%" colspan="2" bgcolor="#CC6600"><font color="#FFFFFF">Venue Details</font></th>
+    </tr>
+  <tr>
+    <th scope="row">&nbsp;</th>
+    <td width="70%" bgcolor="#FFCC99"><em>Name of Event</em></td>
+    <td width="44%" bgcolor="#FFCC99"><input name="eventName" type="text" size="30" maxlength="30"></td>
+    <td width="52%" bgcolor="#FFCC99"><em>Venue</em></td>
+    <td width="44%" bgcolor="#FFCC99"><select name="organizationDept2" id="organizationDept2" >
+      <option disabled>--Select Venue--</option>
+      <option value="Blackman Auditorium"> Blackman Auditorium </option>
+      <option value="Fenway Center"> Fenway Center </option>
+      <option value="Kerr Hall"> Kerr Hall </option>
+      <option value="afterHOURS"> Kerr Hall </option>
+      
+    </select></td>
+    </tr>
+  <tr>
+    <th scope="row">&nbsp;</th>
+    <td bgcolor="#FFCC99"><em>Day/Date(s) of Event (note rehearsals)</em></td>
+    <td bgcolor="#FFCC99">
+      <label for="datesOfEvent"></label>
+      <select name="datesOfEvent" id="datesOfEvent"  multiple="multiple" size="4">
+      	 <option disabled>--Select Date/Dates --</option>
+         <option value="10/01/2015"> 10/01/2015 </option>
+         <option value="10/07/2015"> 10/07/2015 </option>
+         <option value="10/14/2015"> 10/14/2015 </option>
+         <option value="10/21/2015"> 10/21/2015 </option>
+         <option value="10/28/2015"> 10/28/2015 </option>
+         <option value="11/07/2015"> 11/07/2015 </option>
+         <option value="11/07/2015"> 18/07/2015 </option>
+      </select></td>
+       <td bgcolor="#FFCC99"><em>Ticket Prices (N/A for Kerr &amp; afterHOURS)</em></td>
+    <td bgcolor="#FFCC99">
+      <table width="260" border="0">
+        <tr>
+          <td width="155" scope="col">NU Student ONLY</th>
+            <th width="89" scope="col"><input type="text" name="nuOnly" id="nuOnly" size="5" maxlength="5">            </th>
+          </tr>
+        <tr>
+          <td>General Public</td>
+          <th><input type="text" name="generalPublic" id="generalPublic" size="5" maxlength="5"></th>
+          </tr>
+        <tr>
+          <td>NU Faculty/Staff</td>
+          <th><input type="text" name="nuFaculty" id="nuFaculty" size="5" maxlength="5"></th>
+          </tr>
+        <tr>
+          <td>Other (please specify)</td>
+          <th><input type="text" name="others" id="others" size="5" maxlength="5"></th>
+          </tr>
+        </table>
+      <label for="datesOfEvent"></label></td>
+    </tr>
+  <tr>
+    <th scope="row">&nbsp;</th>
+    <td bgcolor="#FFCC99"><em>Student Organization/Department</em></td>
+    <td bgcolor="#FFCC99"><label for="datesOfEvent"></label>
+      <select name="organizationDept" id="organizationDept" >
+         <option>--Select Organization/ Dept--</option>
+         <optgroup label="Organization">
+         <option value="ISSI"> NEU ISSI </option>
+         <option value="Sanskriti"> NEU Sanskriti </option>
+         <option value="KASA"> NEU KASA </option>
+         </optgroup>
+         <optgroup label="Department">
+         <option value="IS"> Information Systems </option>
+         <option value="CS"> Computer Science </option>
+          <option value="EE"> Electrical Engineering </option>
+         </optgroup>
+       </select></td>
+       <td bgcolor="#FFCC99"><em>Tickets are to be sold</em></td>
+    <td bgcolor="#FFCC99"><table width="260" border="0">
+      <tr>
+        <td width="155" scope="col">Internet Sales
+          </th>
+          <th width="89" scope="col"><input type="text" name="internetSales" id="internetSales" size="5" maxlength="5"></th>
+        </tr>
+      <tr>
+        <td>Ticket Center/Phone Orders</td>
+        <th><input type="text" name="phoneOrders" id="phoneOrders" size="5" maxlength="5"></th>
+        </tr>
+      <tr>
+        <td>Reserved Seating</td>
+        <th><input type="text" name="reservedSeating" id="reservedSeating" size="5" maxlength="5"></th>
+        </tr>
+      <tr>
+        <td>General Admission</td>
+        <th><input type="text" name="generalAmission" id="generalAmission" size="5" maxlength="5"></th>
+        </tr>
+    </table></td>
+    </tr>
+  <tr>
+    <th scope="row">&nbsp;</th>
+    <td bgcolor="#FFCC99"><em>Contact Name/Position</em></td>
+    <td bgcolor="#FFCC99"><input id="contactName" type="text" size="50" maxlength="50"><input id="position" type="text" size="50" maxlength="50"></td>
+    <td bgcolor="#FFCC99"><em>Ticket Information(N/A for Kerr &amp; afterHOURS)</em></td>
+    <td bgcolor="#FFCC99"><textarea name="ticketInfo" cols="40" rows="5" id="descOfEvnts2">&nbsp;</textarea></td>
+    </tr>
+  <tr>
+    <th scope="row">&nbsp;</th>
+    <td bgcolor="#FFCC99"><em>Phone Number</em></td>
+    <td bgcolor="#FFCC99"><input id="phoneNum" type="text" size="15" maxlength="10"></td>
+     <td bgcolor="#FFCC99"><em>Event Type</em></td>
+    <td bgcolor="#FFCC99"><select name="eventType" id="eventType" >
+      <option disabled>--Select Event Type--</option>
+      <option value="Lecture"> Lecture </option>
+      <option value="Conference"> Conference </option>
+      <option value="Social/Reception"> Social/Reception </option>
+      <option value="Film/Video"> Film/Video </option>
+      <option value="Rehearsal"> Rehearsal </option>
+      <option value="Concert/Performance"> Concert/Performance </option>
+    </select></td>
+    </tr>
+  <tr>
+    <th scope="row">&nbsp;</th>
+    <td bgcolor="#FFCC99"><em>Email</em></td>
+    <td bgcolor="#FFCC99"><input id="emailId" type="text" size="50" maxlength="50"></td>
+    <td bgcolor="#FFCC99"><em>Setup Needs</em></td>
+    <td bgcolor="#FFCC99"><table width="260" border="0">
+      <tr>
+        <td width="155" scope="col">Podium
+          </th>
+          <th width="89" scope="col"><input type="text" name="internetSales2" id="internetSales2" size="5" maxlength="5"></th>
+        </tr>
+      <tr>
+        <td>Easel(s)</td>
+        <th><input type="text" name="phoneOrders2" id="phoneOrders2" size="5" maxlength="5"></th>
+        </tr>
+      <tr>
+        <td>6ft Tables</td>
+        <th><input type="text" name="reservedSeating2" id="reservedSeating2" size="5" maxlength="5"></th>
+        </tr>
+    </table></td>
+    </tr>
+  <tr>
+    <th scope="row">&nbsp;</th>
+    <td bgcolor="#FFCC99"><em>Description of Event</em></td>
+    <td bgcolor="#FFCC99"><textarea name="descOfEvnts" cols="40" rows="10" id="descOfEvnts">&nbsp;</textarea></td>
+    <td bgcolor="#FFCC99"><em>Audio/Visual Needs</em></td>
+    <td bgcolor="#FFCC99"><table width="260" border="0">
+      <tr>
+        <td width="155" scope="col">Cordless Mic
+  </th>
+          <th width="89" scope="col"><input type="text" name="internetSales3" id="internetSales3" size="5" maxlength="5"></th>
+        </tr>
+      <tr>
+        <td>Easel(s)</td>
+        <th><input type="text" name="phoneOrders3" id="phoneOrders3" size="5" maxlength="5"></th>
+        </tr>
+      <tr>
+        <td>Lapel Mic</td>
+        <th><input type="text" name="reservedSeating3" id="reservedSeating3" size="5" maxlength="5"></th>
+        </tr>
+      <tr>
+        <td>Wired Mic</td>
+        <th><input type="text" name="reservedSeating4" id="reservedSeating4" size="5" maxlength="5"></th>
+        </tr>
+      <tr>
+        <td>Mic Floor Stand</td>
+        <th><input type="text" name="reservedSeating5" id="reservedSeating5" size="5" maxlength="5"></th>
+        </tr>
+      <tr>
+        <td>Extension Cord</td>
+        <th><input type="text" name="reservedSeating6" id="reservedSeating6" size="5" maxlength="5"></th>
+        </tr>
+      <tr>
+        <td>VGA Cable</td>
+        <th><input type="text" name="reservedSeating7" id="reservedSeating7" size="5" maxlength="5"></th>
+        </tr>
+      <tr>
+        <td>LCD System</td>
+        <th><input type="text" name="reservedSeating8" id="reservedSeating8" size="5" maxlength="5"></th>
+        </tr>
+      <tr>
+        <td>CD/DVD</td>
+        <th><input type="text" name="reservedSeating9" id="reservedSeating9" size="5" maxlength="5"></th>
+        </tr>
+    </table></td>
+    </tr>
+  <tr>
+  <td>&nbsp;</td>
+   <td bgcolor="#FFCC99"><p><em>Will there be merchandise sales?
+     <input type="checkbox" name="sales" id="sales">
+   </em></p>
+     <p><em>Will there be a book signing?
+       <input type="checkbox" name="sales3" id="sales3">
+       </em></p>
+     <p><em>Will there be a meet and greet?
+       <input type="checkbox" name="sales2" id="sales2">
+     </em></p></td>
+  <td bgcolor="#FFCC99">&nbsp;</td>
+   <td bgcolor="#FFCC99"><em>Setup Type</em></td>
+  <td bgcolor="#FFCC99"><table width="260" border="0">
+    <tr>
+      <td width="155" scope="col">Lecture
+        <th width="89" scope="col"><input type="text" name="internetSales4" id="internetSales4" size="5" maxlength="5"></th>
+      </tr>
+    <tr>
+      <td>Round Tables of 8</td>
+      <th><input type="text" name="phoneOrders4" id="phoneOrders4" size="5" maxlength="5"></th>
+      </tr>
+    <tr>
+      <td>Clear Room</td>
+      <th><input type="text" name="reservedSeating10" id="reservedSeating10" size="5" maxlength="5"></th>
+      </tr>
+    <tr>
+      <td>Classroom</td>
+      <th><input type="text" name="reservedSeating10" id="reservedSeating11" size="5" maxlength="5"></th>
+      </tr>
+    <tr>
+      <td>Mic Floor Stand</td>
+      <th><input type="text" name="reservedSeating10" id="reservedSeating12" size="5" maxlength="5"></th>
+      </tr>
+    <tr>
+      <td>Extension Cord</td>
+      <th><input type="text" name="reservedSeating10" id="reservedSeating13" size="5" maxlength="5"></th>
+      </tr>
+    <tr>
+      <td>VGA Cable</td>
+      <th><input type="text" name="reservedSeating10" id="reservedSeating14" size="5" maxlength="5"></th>
+      </tr>
+    <tr>
+      <td>LCD System</td>
+      <th><input type="text" name="reservedSeating10" id="reservedSeating15" size="5" maxlength="5"></th>
+      </tr>
+    <tr>
+      <td>CD/DVD</td>
+      <th><input type="text" name="reservedSeating10" id="reservedSeating16" size="5" maxlength="5"></th>
+      </tr>
+  </table></td>
+   </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td colspan="4" bgcolor="#CCFFCC"><div align="justify">
+      <input type="checkbox" name="agree" id="agree">
+      I have read and understand the above rules as listed in the Event Information Agreement as well as 
+      all University policies, the laws of the 
+      Commonwealth of Massachusetts
+      .  I also understand that it is my responsibility to share this information with my gro
+      up.  I understand that 
+      if I don't follow these rules, there may be disciplinary sanctions against me and my group. </div>
+      <label for="agree"></label></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td bgcolor="#FFCC99">Date:
+      <label for="dateField"></label>
+      <input type="text" name="dateField" id="dateField"></td>
+    <td bgcolor="#FFCC99">Name of Student Group: 
+      <label for="studentsGroup"></label>
+      <input type="text" name="studentsGroup" id="studentsGroup"></td>
+    <td bgcolor="#FFCC99">Group Representativ</td>
+    <td align="right" bgcolor="#FFCC99"><label for="rep"></label>
+      <input type="text" name="rep" id="rep"></td>
+    </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td bgcolor="#FFCC99">&nbsp;</td>
+    <td colspan="2" align="center" bgcolor="#FFCC99"> <button type="button"> <img src="images/submit.gif" alt="submit" height="30"  width="120"/> </button></td>
+    <td bgcolor="#FFCC99">&nbsp;</td>
+    </tr>
+  </table>
+
+</form>
+</body>
+</html>

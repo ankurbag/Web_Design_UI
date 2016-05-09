@@ -1,0 +1,342 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>CSS3 Selectors Demo</title>
+<style>
+/**a[href^="https"] **/
+a[href^="https"]{
+	background:#FF0;
+	color:#2A0000;
+	}
+div[class$="test"] {
+    background: #ffff00;
+}
+
+ a[href*="w3schools"]{
+	 background:#7F7F55;
+	 color:#F00;
+ }
+ 
+ input:checked {
+    height: 50px;
+    width: 50px;
+}
+
+input[type=text]:enabled {
+    background: #ffff00;
+}
+
+input[type=text]:disabled {
+    background: #dddddd;
+}
+
+p:empty {
+	width: 100px;
+    height: 20px;
+    background:#F00;
+} 
+
+p:first-of-type {
+    background: #0FA;
+} 
+input:in-range {
+    border: 2px solid #0F0;
+} 
+input:out-of-range {
+    border: 2px solid red;
+}
+input:invalid {
+    border: 2px solid red;
+} 
+p:last-child {
+    background: #ff0000;
+}
+p:last-of-type {
+    background: #ff0000;
+} 
+
+:not(p) {
+    /*background: #ff0000;*/
+} 
+p:nth-child(2) {
+    background: #ff0000;
+} 
+
+p:nth-last-child(2) {
+    background: #ff0000;
+}
+p{
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif
+}
+#centerPara{
+	text-align:justify;
+	
+	background-color:#A0E6EB;
+}
+a[target] {
+    background-color: yellow;
+}
+
+h1,strong{
+	color:#0012F0;
+}
+#wrapper{
+	
+}
+#content{
+	/*padding: 10px 0;*/
+	width: 780px;
+	float: left;
+	background:#FFBFFF
+	}
+.menu{
+	float: left;
+	width: 200px !important
+	background: #EADCAE;
+	padding-bottom: 10px;
+}
+ a{
+	display:block;
+	background-color:#EA7D11 ;
+	color:#2A1F00;
+	/**height:20px;*/
+	width:150px;
+	text-decoration:none;
+	line-height:50px;
+	border:#2A1FAA thin;
+	
+}
+a:hover{
+	background-color:#2A3F00;
+}
+a:visited{
+	color:#FF0
+}
+p::first-letter{
+	font-size:24px;
+}
+p::first-line{
+	color:#F05;
+}
+p::after{background-color:#A39CEF}
+p:only-of-type {
+    background: #F86991;
+} 	
+
+input:valid {
+    background-color:#9BE897;
+}
+	
+/*
+* {
+    background-image:url(images/blackStrip.png);
+	background-repeat:repeat-y;
+}*/
+div[class^="test"] {
+    background: #ffff00;
+}
+p ~ ul {
+    background: #95E3BE;
+}
+input:valid {
+    background-color: yellow;
+}
+input:required  {
+    background-color:#A3F459;
+}
+input:optional {
+    background-color: yellow;
+}
+
+input:-moz-read-only { /* For Firefox */
+    background-color: yellow;
+}
+
+input:read-only {
+    background-color: yellow;
+}
+
+input:-moz-read-write { /* For Firefox */
+    background-color: yellow;
+}
+
+input:read-write {
+    background-color: yellow;
+}
+:root {
+    background: #C7C7C7;
+}
+
+:target {
+    border: 2px solid #D4D4D4;
+    background-color: #e5eecc;
+}
+</style>
+</head>
+
+<body>
+<h1>Welcome to My CSS3 Homepage</h1>
+<hr />
+<div id="wrapper">
+<div class="menu">
+	<a href="https://www.google.com/" target="_blank">Google</a>
+    <a href="http://www.w3schools.com/cssref/css_selectors.asp">W3Schools</a>
+    <a href="#">Education</a>
+    <a href="http://www.w3schools.com/cssref/sel_attr_end.asp">HTML</a>
+</div>
+<p>Perfection is not attainable, but if we chase perfection we can catch excellence.' quoted by Vince Lombardi, is an apt reflection of the firm belief and perseverance </p>
+<div id="content">
+<div class="first_test">The first div element.</div>
+<div class="second">The second div element.</div>
+<div class="test">The third div element.</div>
+<p></p>
+After eMPtY Paragraph
+<h3>Form CSS</h3>
+<form action="">
+  <input type="radio" checked="checked" value="male" name="gender"> Male<br>
+  <input type="radio" value="female" name="gender"> Female<br>
+  <input type="checkbox" checked="checked" value="Bike"> I have a bike<br>
+  <input type="checkbox" value="Car"> I have a car 
+  First name: <input type="text" value="Mickey"><br>
+Last name: <input type="text" value="Mouse"><br>
+Country: <input type="text" disabled="disabled" value="Disneyland">
+  
+  
+  <h3>A demonstration of the :in-range selector.</h3>
+
+<input type="number" min="5" max="10" value="7">
+
+<p>Try typing a number out of range (less than 5 or higher than 10), to see the styling disappear.</p>
+
+<p><strong>Note</strong>: The :in-range selector is not supported in Internet Explorer.</p>
+
+<h3>A demonstration of the :out-of-range selector.</h3>
+
+<input type="number" min="5" max="10" value="17">
+
+<p>Try typing a number within the given range (between 5 and 10), to see the styling disappear.</p>
+
+<p><strong>Note</strong>: The :out-of-range selector is not supported in Internet Explorer.</p>
+
+<h3>A demonstration of the :invalid selector.</h3>
+
+<input type="email" value="supportEmail">
+
+<p>Try typing a legal e-mail address, to see the styling disappear.</p>
+
+<p><strong>Note</strong>: The :invalid selector is not supported in Internet Explorer 9 and earlier versions.</p>
+
+<h3>A demonstration of the :optional selector.</h3>
+
+<p>An optional input element:<br><input></p>
+
+<p>A required input element:<br><input required></p>
+
+<p>The :optional selector selects form elements with no "required" attribute.</p>
+
+<h3>A demonstration of the :read-only selector.</h3>
+
+<p>A normal input element:<br><input value="hello"></p>
+
+<p>A readonly input element:<br><input readonly value="hello"></p>
+
+<p>The :read-only selector selects form elements with a "readonly" attribute.</p>
+
+<p><strong>Note:</strong> The :read-only selector is not supported in Internet Explorer.</p>
+
+<p><strong>Note:</strong> Firefox supports an alternative, the :-moz-read-only property.</p>
+<h3>A demonstration of the :read-write selector.</h3>
+
+<p>A normal input element:<br><input value="hello"></p>
+
+<p>A readonly input element:<br><input readonly value="hello"></p>
+
+<p>The :read-write selector selects form elements with no "readonly" attribute.</p>
+
+<p><strong>Note:</strong> The :read-write selector is not supported in Internet Explorer.</p>
+
+<p><strong>Note:</strong> Firefox supports an alternative, the :-moz-read-write property.</p>
+
+
+<h3>A demonstration of the :valid selector.</h3>
+
+<input type="email" value="support@exampel.com">
+
+<p>Try typing an illegal e-mail address, to see the styling disappear.</p>
+
+<p><strong>Note</strong>: The :valid selector is not supported in Internet Explorer 9 and earlier versions.</p>
+
+</form>
+<p class="test">This is some text in a paragraph.</p>
+ <p>Perfection is not attainable, but if we chase perfection we can catch excellence.' quoted by Vince Lombardi, is an apt reflection of the firm belief and perseverance </p>
+<div>A div element.
+<h1>This is a heading</h1>
+
+<p><a href="#news1">Jump to New content 1</a></p>
+<p><a href="#news2">Jump to New content 2</a></p>
+
+<p>Click on the links above and the :target selector highlight the current active HTML anchor.</p>
+
+<p id="news1"><b>New content 1...</b></p>
+<p id="news2"><b>New content 2...</b></p>
+
+<p><b>Note:</b> Internet Explorer 8 and earlier versions do not support the :target selector.</p>
+
+</div>
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<p>The first paragraph.</p>
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+
+<h2>Another list</h2>
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+    <h3>A demonstration of the :valid selector.</h3>
+
+<input type="email" value="support@exampel.com">
+
+<h3>A demonstration of the :required selector.</h3>
+
+<p>An optional input element:<br><input></p>
+
+<p>A required input element:<br><input required></p>
+
+<p>The :required selector selects form elements with a "required" attribute.</p>
+
+
+<p>Try typing an illegal e-mail address, to see the styling disappear.</p>
+    <div id="skills">
+    <p><strong>Skills Achieved</strong> :<br />
+    •	Java - J2EE and Java frameworks(Struts 1.3, Struts 2.0,2.3)<br />
+    •	DBMS Software/Tools: Oracle 10g, MySQL ,SQL Developer<br />
+    •	Tools Known : RAD 7.5, Eclipse, ReqPro ,Toad,HP Quality Center<br />
+    •	Web Technology : HTML , JavaScript,CSS<br />
+    <br /></p>
+    </div>
+    <div id="professionalExp">
+    <strong>Professional Experience</strong> :<br />
+    •	HSBC GLT India Pvt Ltd. Jun&rsquo;14 - Jul&rsquo;15<br />
+    •	IBM India Pvt Ltd. Apr&rsquo;12-Jun&rsquo;14<br />
+    •	Seed Infotech &amp; Kotech Software Aug&rsquo;13 - Jun &lsquo;15<br />
+    <br />
+    I had been best outgoing student at my undergraduate schools in   the year   2011 . Also actively participated in co-curricular and extra-     curricular activities.<br />
+    To sum up, I am a strong enthusiast of creative work and continuously look to attain perfection in whatever I do.</p>
+    
+    </div>
+    </div>
+    </div>
+
+</body>
+</html>

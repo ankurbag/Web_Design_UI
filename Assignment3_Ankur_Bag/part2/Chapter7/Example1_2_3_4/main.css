@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+/**  Increase the gaps between each line of text to 1.3 em. **/
+		body{
+			border:#000 double;
+			padding:20px 20px 20px 20px;
+			line-height:1.3em;
+		}
+		#menu{
+			width:90%;
+		}
+
+		/**  Give the main image on the homepage aclass attribute whose value ismain_image , then
+ create a rule that gives the image a single - pixel black border, and also give the image a 10 - pixel
+margin on the right and bottom sides of the image. **/
+		.main_image{
+			border:#000 thin solid;
+			margin-right:10px;
+			margin-bottom::10px
+			
+		}
+		/** Q2  Create a CSS rule that will make the following changes to the navigation:
+D  Add a single pixel gray border on the top and bottom.
+E  Give it 20 pixels of margin above and below the gray lines.
+F  Give it 10 pixels of padding on the top and bottom in the box.
+G  Add a margin to the right of each link in the navigation.**/
+		a{
+			text-decoration:none;
+		}
+		#menu a{
+			display:inline;
+			padding-top:10px;
+			padding-bottom:10px;
+			line-height:50px;
+			background-color:#BCBCBC;width:150px;
+			text-decoration:none;
+			margin-left:20px;
+			margin-right:20px;
+		}
+			
+		#menu a:hover{
+			background:#2A0000;
+			color:#FFFBF0;}
+		
+		#menu{
+			background-color:#BCBCBC;
+			width:100%;
+			border-top:#4F4F4F thin solid;
+			border-bottom:#4F4F4F thin solid;
+			
+		}
+		
+			

@@ -1,0 +1,62 @@
+Exercise 6
+-------------------------------------------------------------------------------------------------
+Q1  If you want to reduce the spacing between letters, how will you do so? Provide an example
+declaration
+ans 1:
+To reduce the spacing between the leters , we will use negative value for letter-spacing.
+For Example :
+strong {
+ font-family: “Times New Roman” , Georgia, Serif;
+ font-variant: small-caps;
+ letter-spacing: -0.1em;
+ }
+
+This will reduce spacing for elements with strong tags.
+-------------------------------------------------------------------------------------------------
+Q2 How do you remove the underlines from links but restore the underlines when the links are
+focused on or hovered over?
+Ans
+We remove underline by using 'text-decoration : none' property.
+For Eg:
+a{
+text-decoration : none;
+}
+
+a:hover,a:focus{
+text-decoration : underline;
+}
+-------------------------------------------------------------------------------------------------
+Q3 When indenting text in a paragraph, how is a percentage value calculated?
+Ans  The percentage width assigned by the text-indent property depends on the width of the element’s parent.
+-------------------------------------------------------------------------------------------------
+Q4. What are the keywords that CSS offers for changing the case of text within an element?
+Ans 'text-transform : value' offers us changing the case of text.
+
+Following are the keywords --
+text-transform  : capitalize | uppercase | lowercase | none
+Initial value: none
+-------------------------------------------------------------------------------------------------
+Q5. If you want to preserve line breaks and spacing as formatted in the source code, what CSS
+declaration will you use?
+Ans We have to use 'white-space' property with pre tag to preserve line breaks and spacing as formatted in the source code
+for eg :
+<!DOCTYPE html PUBLIC “-//W3C//DTD HTML 4.01//EN”
+ “http://www.w3.org/TR/html4/strict.dtd”>
+<html lang=”en”>
+<head>
+ <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8”>
+ <title>Figure 6-15</title>
+ <style type=”text/css”>
+ code {
+ white-space: pre;
+ }
+ </style>
+<body>
+<code>
+&lt; script type=”text/javascript”&gt;
+ document.documentElement.className = ‘js’;
+&lt; /script&gt;
+</code>
+</body>
+</html>
+-------------------------------------------------------------------------------------------------

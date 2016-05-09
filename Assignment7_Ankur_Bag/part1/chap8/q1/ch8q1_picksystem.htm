@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Ch 8 Q1</title>
+    
+</head>
+<body>
+    <form name="form1">
+        <table>
+            <tr>
+                <td width="300">
+                    Processor
+                    <br />
+                    <select name="cboProcessor">
+                        <option value="100">MegaPro 10ghz</option>
+                        <option value="101">MegaPro 12</option>
+                        <option value="102">MegaPro 15ghz</option>
+                    </select>
+                    <br />
+                    <br />
+                    Hard drive
+                    <br />
+                    <select name="cboHardDrive">
+                        <option value="200">30tb</option>
+                        <option value="201">40tb</option>
+                        <option value="202">60tb</option>
+                    </select>
+                    <br />
+                    <br />
+                    CD-ROM
+                    <input type="checkbox" name="chkCDROM" value="300" />
+                    <br />
+                    DVD-ROM
+                    <input type="checkbox" name="chkDVD" value="301" />
+                    <br />
+                    Scanner
+                    <input type="checkbox" name="chkScanner" value="302" />
+                    <br />
+                    <br />
+                    Desktop Case
+                    <input type="radio" name="radCase" checked value="400" />
+                    <br />
+                    Mini Tower
+                    <input type="radio" name="radCase" value="401" />
+                    <br />
+                    Full Tower
+                    <input type="radio" name="radCase" value="402" />
+                    <br />
+                    <br />
+                    <input type="button" value="Update" name="butUpdate" onclick="updateOrderDetailsOnPage()" />
+                </td>
+            </tr>
+        </table>
+    </form>
+    <script type="text/javascript">
+    var companyitems = new Array();
+    companyitems[100] = 1000;
+    companyitems[101] = 1250;
+    companyitems[102] = 1500;
+
+    companyitems[200] = 35;
+    companyitems[201] = 65;
+    companyitems[202] = 95;
+
+    companyitems[300] = 50;
+    companyitems[301] = 75;
+    companyitems[302] = 100;
+
+    companyitems[400] = 10;
+    companyitems[401] = 15;
+    companyitems[402] = 25;
+    function updateOrderDetailsOnPage()
+    {
+        var total = 0;
+        var orderDetails = "";
+        var formElement;
+        var myForm = document.form1;
+        formElement = myForm.cboProcessor[myForm.cboProcessor.selectedIndex];
+        total = parseFloat(companyitems[formElement.value]);
+        orderDetails = "<b>Processor</b> : " + formElement.text;
+        orderDetails = orderDetails + " $" + companyitems[formElement.value] + "<br />";
+
+        formElement = myForm.cboHardDrive[myForm.cboHardDrive.selectedIndex];
+        total = total + parseFloat(companyitems[formElement.value]);
+        orderDetails = orderDetails + "<b>Hard Drive</b> : " + formElement.text;
+        orderDetails = orderDetails + " $" + companyitems[formElement.value] + "<br />";
+
+        formElement = myForm.chkCDROM;
+        if (formElement.checked == true)
+        {
+            orderDetails = orderDetails + "<b>CD-ROM</b> : $" + companyitems[formElement.value] + "<br />";
+            total = total + parseFloat(companyitems[formElement.value]);
+        }
+
+        formElement = myForm.chkDVD;
+        if (formElement.checked == true)
+        {
+            orderDetails = orderDetails + "<b>DVD-ROM</b> : $" + companyitems[formElement.value] + "<br />";
+            total = total + parseFloat(companyitems[formElement.value]);
+        }
+
+        formElement = myForm.chkScanner;
+        if (formElement.checked == true)
+        {
+            orderDetails = orderDetails + "<b>Scanner</b> : $" + companyitems[formElement.value] + "<br />";
+            total = total + parseFloat(companyitems[formElement.value]);
+        }
+
+        formElement = myForm.radCase;
+        if (formElement[0].checked == true)
+        {
+            orderDetails = orderDetails + "<b>Desktop Case</b> : $" + companyitems[formElement[0].value] + "<br />";
+            total = total + parseFloat(companyitems[formElement[0].value]);
+        }
+        else if (formElement[1].checked == true)
+        {
+            orderDetails = orderDetails + "<b>Mini Tower Case</b> : $" + companyitems[formElement[1].value] + "<br />";
+            total = total + parseFloat(companyitems[formElement[1].value]);
+        }
+        else
+        {
+            orderDetails = orderDetails + "<b>Full Tower Case </b>: $" + companyitems[formElement[2].value] + "<br />";
+            total = total + parseFloat(companyitems[formElement[2].value]);
+        }
+
+        orderDetails = orderDetails + "<p><b>Total Order Cost is</b> $" + total + "</p>";
+
+        top.systemSummary.document.close();
+        top.systemSummary.document.open();
+        top.systemSummary.document.write(orderDetails);
+    }
+
+    </script>
+    
+</body>
+</html>

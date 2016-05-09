@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+ <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    
+<head>
+    <title>Ch 8: Q 2</title>
+    <script type="text/javascript" src="myJs.js"></script>
+    <style type="text/css">
+		img{
+			cursor: pointer; cursor: hand;
+		}
+    </style>
+</head>
+<body>
+	<div class="page-header">
+            <h2 align="center">
+                Online Book Buyer</h2>
+    </div>
+    <div class="container">
+    	<form name="form1" >
+        <input type="button" class="btn btn-info"  value="Show Shopping Basket" onclick="showBasket()" name="btnShowBasket" />
+    	</form>
+        <p>
+            Click below books to add to basket
+        </p>
+        <h4>Professional Ajax</h4>
+        <p>
+            <img class="img-thumbnail" src="images/pro_ajax.jpg" alt="Professional Ajax, 2nd Edition" border="0" 
+                onclick="showDetails('pro_ajax_details.htm')" />
+        </p>
+        <h4>Professional JavaScript for Web Developers</h4>
+        <p>
+            <img class="img-thumbnail" src="images/pro_js.jpg" alt="Professional JavaScript, 2nd Edition" border="0" 
+                onclick="showDetails('pro_js_details.htm')" />
+        </p>
+        
+        <h4>HTML, XHTML, and CSS, Sixth Edition: Visual QuickStart Guide.</h4>
+        <p>
+            <img class="img-thumbnail" src="images/html_book.jpg" alt=HTML, XHTML, and CSS, Sixth Edition: Visual QuickStart Guide." border="0" 
+                onclick="showDetails('pro_html_details.htm')" />
+        </p>
+    </div>
+    <div class="panel-footer">
+        
+        Developed & Maintained by Ankur Bag
+        
+        </div>
+</body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <style>
+  	th{
+		background-color:#A8C841;
+		color:white;
+	}
+	span:hover{
+		cursor:pointer;cursor:hand;
+	}
+  </style>
+</head>
+<body onLoad="enableDisableComponent()">
+
+<div class="container">
+  <h2>Part 6 Demo</h2>
+             
+  <table class="table table-bordered table-hover">
+    <thead>
+      <tr>
+      	<th></th>
+        <th>STUDENT</th>
+        <th>ADVISOR</th>
+        <th>AWARD STATUS</th>
+        <th>SEMESTER</th>
+        <th>TYPE</th>
+        <th>BUDGET#</th>
+        <th>PERCENTAGE</th>
+      </tr>
+      
+    </thead>
+    <tbody>
+      <tr>
+        <td> <input class="myCheckbox" name="chkbox" type="checkbox" onClick="enableDisableComponent()" /><br/>
+        <span class="glyphicon glyphicon-arrow-down" onClick="toggleNext(this)"></span>
+        </td>
+        <td>John</td>
+        <td>Doe</td>
+        <td>APPROVED</td>
+        <td>SUMMER1</td>
+        <td>TA</td>
+        <td>123456</td>
+        <td>100%</td>
+      </tr>
+      <tr style="display:none">
+       <td colspan="8"><dl>
+          <dt>Advisor</dt>
+           <dd>Tricia Dowd</dd>
+           <dt>Comments</dt>
+           <dd>Best student</dd>
+           <dt>Status</dt>
+           <dd>Approved</dd>
+       </dl>
+       <span class="glyphicon glyphicon glyphicon-pencil" data-toggle="modal" data-target="#myModal" onClick=""></span>    <!-- Trigger the modal with a button -->
+           <!-- Modal -->
+              <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                     <h4 class="modal-title">Change Budget Number</h4>
+                   </div>
+                   <div class="modal-body">
+                     New Budget Number<input type="text"/>                      
+                   </div>
+                   <div class="modal-footer">
+                     <button type="button" class="btn btn-default">Change Budget Number</button>
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                   </div>
+                  </div>
+                  
+                </div>
+              </div>
+       
+      </td>
+      </tr>
+      <tr>
+      <td> <input name="chkbox" class="myCheckbox"  type="checkbox" onClick="enableDisableComponent()" /><br/>
+      <span class="glyphicon glyphicon-arrow-down" onClick="toggleNext(this)"></span>
+      </td>
+        <td>Mary</td>
+        <td>Moe</td>
+        <td>APPROVED</td>
+        <td>SUMMER1</td>
+        <td>GA</td>
+        <td>123456</td>
+        <td>100%</td>
+      </tr>
+       <tr style="display:none">
+       <td colspan="8"><dl>
+          <dt>Advisor</dt>
+           <dd>Tricia Dowd</dd>
+           <dt>Comments</dt>
+           <dd>Best student</dd>
+           <dt>Status</dt>
+           <dd>Approved</dd>
+       </dl>
+        <span class="glyphicon glyphicon glyphicon-pencil" data-toggle="modal" data-target="#myModal1" onClick=""></span>    <!-- Trigger the modal with a button -->
+           <!-- Modal -->
+              <div class="modal fade" id="myModal1" role="dialog">
+                <div class="modal-dialog">
+                
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                     <h4 class="modal-title">Change Budget Number</h4>
+                   </div>
+                   <div class="modal-body">
+                     New Budget Number<input type="text"/>                      
+                   </div>
+                   <div class="modal-footer">
+                     <button type="button" class="btn btn-default">Change Budget Number</button>
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                   </div>
+                  </div>
+                  
+                </div>
+              </div>
+       
+      
+       </td>
+      </tr>
+      <tr>
+      <td> <input class="myCheckbox" name="chkbox" type="checkbox" onClick="enableDisableComponent()"  /><br/>
+      <span class="glyphicon glyphicon-arrow-down" onClick="toggleNext(this)"></span>
+      </td>
+        <td>July</td>
+        <td>Dooley</td>
+        <td>APPROVED</td>
+        <td>SUMMER2</td>
+        <td>TA</td>
+        <td>123456</td>
+        <td>80%</td>
+      </tr>
+       <tr style="display:none">
+       <td colspan="8"><dl>
+          <dt>Advisor</dt>
+           <dd>Tricia Dowd</dd>
+           <dt>Comments</dt>
+           <dd>Best student</dd>
+           <dt>Status</dt>
+           <dd>Approved</dd>
+       </dl>
+        <span class="glyphicon glyphicon glyphicon-pencil" data-toggle="modal" data-target="#myModal2" onClick=""></span>    <!-- Trigger the modal with a button -->
+           <!-- Modal -->
+              <div class="modal fade" id="myModal2" role="dialog">
+                <div class="modal-dialog">
+                
+                  <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                     <button type="button" class="close" data-dismiss="modal">&times;</button>
+                     <h4 class="modal-title">Change Budget Number</h4>
+                   </div>
+                   <div class="modal-body">
+                     New Budget Number<input type="text"/>                      
+                   </div>
+                   <div class="modal-footer">
+                     <button type="button" class="btn btn-default">Change Budget Number</button>
+                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                   </div>
+                  </div>
+                  
+                </div>
+              </div>
+       
+      
+       </td>
+      </tr>
+    </tbody>
+  </table>
+  <!--<input type="submit" id="sub" class="btn-warning" />-->
+  <button id="sub" type="button" class="btn btn-warning">SUBMIT SELECTED AWARDS</button>
+  <script>
+  var enableDisableComponent = function() {
+  var n = $( "input:checked" ).length;
+	 (n > 0 )? $('#sub').removeAttr('disabled') :$('#sub').attr('disabled','disabled');
+	};
+	enableDisableComponent();
+   $( "input[type=checkbox]" ).on( "click", enableDisableComponent );
+   
+   $(".glyphicon-arrow-down").click(function(){
+	   $(this).parent().parent().next().toggle();
+   });
+   
+   $('input[type=checkbox]').click(function() {
+		if($(this).is(':checked')) {
+			$(this).parent().parent().css("background-color","#FFFDBD");
+		} else {
+			$(this).parent().parent().css("background-color","#FFF");
+		}
+	});
+  </script>
+</div>
+
+</body>
+</html>

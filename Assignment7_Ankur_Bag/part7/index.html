@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="utf-8">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+     <style>
+	 
+		.container{
+			/*width:900px;
+			height:400px;
+			padding:20px;*/
+			padding-top:2.5%;
+			width:800px;
+			border:1px solid gray;
+			-webkit-box-sizing:border-box;
+			-moz-box-sizing:border-box;
+			box-sizing:border-box;
+		  background: black;
+		}
+		.image-slider-wrapper{
+			overflow: hidden;
+		}
+		#image_slider{
+			position: relative;
+			overflow: hidden;
+			height: 310px;
+			padding:0;
+			left:0;
+		}
+		#image_slider li{
+			position:relative;
+			max-width: 100%;
+			float:left;
+			list-style: none;
+			left: 0;
+		}
+		.img-overlay {
+		margin: -120px 0 -20px 10px; /* play with these to position the image */
+		position:absolute;
+		z-index:100;
+		width:300px;
+		}
+		a img{
+			cursor: pointer; cursor: hand; 
+			opacity:1.0;	
+		}
+		.col-md-2, .col-lg-2{
+		 position:absolute;
+		 left:850px;
+		 background-color:#F5EDED;
+		 width:200px ;
+		 opacity:0.8;
+		 padding:3px;
+		}
+		
+		a img:hover{
+		 
+		 opacity:1.0;
+		
+		}
+	
+	 </style>
+	</head>
+	<body>
+		 <div class="page-header" style="padding-left:50%">
+        		<h3>Amazon Inc</h3>
+    	    </div>
+       
+		<div class="container">
+            <div class="row">
+			<div class="image-slider-wrapper col-md-12 col-lg-12" >
+				<ul id="image_slider">
+					<li id="li1"><img src="images/1.jpg"></li>
+					<li id="li2"><img src="images/2.jpg"></li>
+					<li id="li3"><img src="images/3.jpg"></li>
+					<li id="li4"><img src="images/4.jpg"></li>
+					<li id="li5"><img src="images/5.jpg"></li>
+				</ul>
+                
+                <div id="temp" style="display:none">
+                	<img src="images/1.jpg">
+                </div>	
+              
+				<div class="pager">
+				</div>
+                
+          	</div>
+            	<div class="col-md-2 col-lg-2">
+                	<a ><img id="1" class="img-responsive img-responsive" src="images/11.JPG"/></a> 
+                    <a><img  id="2" class="img-responsive img-responsive" src="images/12.jpg" /></a>
+                    <a><img  id="3" class="img-responsive img-responsive" src="images/13.jpg" /></a>
+                    <a><img  id="4" class="img-responsive img-responsive" src="images/14.JPG" /></a>
+                    <a><img  id="5" class="img-responsive img-responsive" src="images/15.JPG" /></a>
+                </div>
+            </div>
+            
+            
+		</div>
+        <div class="panel-footer">
+        
+        Developed & Maintained by Ankur Bag
+        
+        </div>
+	<script>
+	function animateIt() {
+	  $("#image_slider #li1" ).slideToggle( 3000, animateIt2 );
+	}
+	function animateIt2() {
+	  $( "#image_slider #li2" ).slideToggle( 3000, animateIt3 );
+	}
+	function animateIt3() {
+	  $( "#image_slider #li3" ).slideToggle(3000, animateIt4 );
+	}
+	function animateIt4() {
+	  $( "#image_slider #li4" ).slideToggle( 3000, animateIt5 );
+	}
+	function animateIt5() {
+	  $( "#image_slider #li5" ).slideToggle( 3000, animateIt );
+	}
+	animateIt();
+	 
+	$("a img").hover(function() {
+	  var num = $(this).attr("id");
+	 // alert(num);	 
+	  $( "#temp" ).css("display","block");
+	  $("#image_slider").css("display","none");
+	  $("#temp img").attr("src","images/"+num+".jpg");
+	  $("#temp img").fadeIn(200);
+	});
+	
+	$("a img").mouseout(function() {
+	  $( "#temp" ).css("display","none");
+	  $("#image_slider").css("display","block");
+	  $("#temp img").fadeOut(200);
+	});
+	
+	</script>
+    </body>
+</html>

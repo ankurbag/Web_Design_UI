@@ -1,0 +1,22 @@
+The problem is that the sentence has repeated “has has” and “and and” inside it.
+So the myString “This sentence has has a fault and and we need to fix it.” will become “This sentence has a fault and we need to fix it.”
+
+Let’s look at how the code works, starting with the regular expression.
+/(\b\w+\b) \1/g;
+By using parentheses, we have defined a group, so (\b\w+\b) is group 1. This group matches the pattern
+of a word boundary followed by one or more alphanumeric characters, that is, a–z, A–Z, 0–9, and _,
+followed by a word boundary. Following the group you have a space then \1. \1 means is match exactly the same characters as were matched in pattern group 1. So, for example, if group 1 matched
+“has,” then \1 will match “has” as well. It’s important to note that \1 will match the exact previous
+match by group 1. So when group 1 then matches the “and,” the \1 now matches “and” and not the
+“has” that was previously matched.
+You use the group again in your replace() method; this time the group is specifi ed using the $
+symbol, so $1 matches group 1. It’s this that causes the two matched “has” and “and” to be replaced by
+just one.
+
+To change the 2nd Part,we have to use:
+
+var myRegExp = new RegExp(“(\b\w+\b) \1”);
+we need to use two slashes (\\) rather than one when you mean a regular expression syntax character, like this:
+var myRegExp = new RegExp(“(\\b\\w+\\b) \\1”,”g”);
+
+Also we need to pass a g to the second parameter to make it a global match.

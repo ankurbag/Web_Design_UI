@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Chapter 8 **/
+
+#nav{
+	background-color:#B7B7B7;
+	width:400px;
+}
+.navHeader {
+	list-style-image:url(images/bullet.gif);
+	font-weight:bold;
+}
+
+.navHeader2{
+	list-style:square;
+	font-weight:normal;
+}
+a,a:active{
+	text-decoration:none;
+	color:#060606;
+	width:250px;
+}
+a:visited{
+	color:#2A00AA;
+}
+a:hover{
+	color:#F05;
+	text-decoration:underline;
+}
+#div1,#div2,#div3{
+	 border-style:solid;
+	 border-color:#000000;
+	 border-width:2px;
+	 padding:5px;
+	 background-color:#FFFFFF;
+	 width:700px;
+}
+#div2{
+	 position:relative;
+	 left: 50px;
+	 top: -40px;
+}
+#div3{
+	 position:relative;
+	 left: 100px;
+	 top: -80px;
+}
+	
+	

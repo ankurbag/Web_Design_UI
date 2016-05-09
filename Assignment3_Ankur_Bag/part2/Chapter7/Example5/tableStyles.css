@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+h1{
+	text-align:center;
+	}
+	
+#myTable{
+	padding : 5 px;
+	height:300px;
+	width:25%;
+	text-align:center;
+	
+	margin-left:30%;
+	
+}
+.odd{
+	background-color:#A0A0A4;
+}
+th{
+	background-color:#000;
+	color:#FFF;
+	}
+
+	
